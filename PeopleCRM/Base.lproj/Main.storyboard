@@ -33,8 +33,16 @@
                             <constraint firstItem="nWv-QB-J0q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="567-AZ-OLb"/>
                             <constraint firstAttribute="bottom" secondItem="nWv-QB-J0q" secondAttribute="bottom" id="B3W-ca-3bt"/>
                             <constraint firstItem="nWv-QB-J0q" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="CBu-3H-hwa"/>
+                            <constraint firstItem="nWv-QB-J0q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="EsX-Ti-sut"/>
                             <constraint firstAttribute="trailing" secondItem="nWv-QB-J0q" secondAttribute="trailing" id="Tl6-Ph-bRr"/>
+                            <constraint firstItem="nWv-QB-J0q" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="n3q-YD-hh8"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="567-AZ-OLb"/>
+                                <exclude reference="EsX-Ti-sut"/>
+                            </mask>
+                        </variation>
                     </view>
                     <navigationItem key="navigationItem" id="JDl-yp-T5J">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="sBT-qI-edC"/>

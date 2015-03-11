@@ -16,11 +16,13 @@
 		62B707CE1AAFD4730031A941 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62B707CC1AAFD4730031A941 /* LaunchScreen.xib */; };
 		62B707DA1AAFD4730031A941 /* PeopleCRMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707D91AAFD4730031A941 /* PeopleCRMTests.m */; };
 		62B707E61AAFE9A10031A941 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707E51AAFE9A10031A941 /* Person.m */; };
-		62B707EA1AAFEB500031A941 /* PersonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62B707E91AAFEB500031A941 /* PersonCollectionViewCell.xib */; };
+		62B707EA1AAFEB500031A941 /* PersonCollectionViewCellDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62B707E91AAFEB500031A941 /* PersonCollectionViewCellDetails.xib */; };
 		62B707EE1AAFED690031A941 /* github_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B707EC1AAFED690031A941 /* github_logo.png */; };
 		62B707EF1AAFED690031A941 /* twitter_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B707ED1AAFED690031A941 /* twitter_logo.png */; };
 		62B707F11AAFEFE20031A941 /* avatar_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B707F01AAFEFE20031A941 /* avatar_placeholder.png */; };
 		62B707F51AAFF1860031A941 /* ArrayCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707F41AAFF1860031A941 /* ArrayCollectionViewDataSource.m */; };
+		62B707F71AB096D20031A941 /* PersonCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62B707F61AB096D20031A941 /* PersonCollectionReusableView.xib */; };
+		62B707FA1AB0972E0031A941 /* PersonCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707F91AB0972E0031A941 /* PersonCollectionReusableView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,12 +52,15 @@
 		62B707D91AAFD4730031A941 /* PeopleCRMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeopleCRMTests.m; sourceTree = "<group>"; };
 		62B707E41AAFE9A10031A941 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		62B707E51AAFE9A10031A941 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		62B707E91AAFEB500031A941 /* PersonCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCollectionViewCell.xib; sourceTree = "<group>"; };
+		62B707E91AAFEB500031A941 /* PersonCollectionViewCellDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCollectionViewCellDetails.xib; sourceTree = "<group>"; };
 		62B707EC1AAFED690031A941 /* github_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = github_logo.png; sourceTree = "<group>"; };
 		62B707ED1AAFED690031A941 /* twitter_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_logo.png; sourceTree = "<group>"; };
 		62B707F01AAFEFE20031A941 /* avatar_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_placeholder.png; sourceTree = "<group>"; };
 		62B707F31AAFF1860031A941 /* ArrayCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayCollectionViewDataSource.h; sourceTree = "<group>"; };
 		62B707F41AAFF1860031A941 /* ArrayCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayCollectionViewDataSource.m; sourceTree = "<group>"; };
+		62B707F61AB096D20031A941 /* PersonCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCollectionReusableView.xib; sourceTree = "<group>"; };
+		62B707F81AB0972E0031A941 /* PersonCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCollectionReusableView.h; sourceTree = "<group>"; };
+		62B707F91AB0972E0031A941 /* PersonCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCollectionReusableView.m; sourceTree = "<group>"; };
 		671CA53971DA7818CC90A69F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C12E98B00774ED31D5AB2885 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -172,7 +177,10 @@
 		62B707E81AAFEB3A0031A941 /* PersonCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				62B707E91AAFEB500031A941 /* PersonCollectionViewCell.xib */,
+				62B707E91AAFEB500031A941 /* PersonCollectionViewCellDetails.xib */,
+				62B707F61AB096D20031A941 /* PersonCollectionReusableView.xib */,
+				62B707F81AB0972E0031A941 /* PersonCollectionReusableView.h */,
+				62B707F91AB0972E0031A941 /* PersonCollectionReusableView.m */,
 			);
 			path = PersonCollectionViewCell;
 			sourceTree = "<group>";
@@ -290,10 +298,11 @@
 				62B707EF1AAFED690031A941 /* twitter_logo.png in Resources */,
 				62B707EE1AAFED690031A941 /* github_logo.png in Resources */,
 				62B707C91AAFD4730031A941 /* Main.storyboard in Resources */,
+				62B707F71AB096D20031A941 /* PersonCollectionReusableView.xib in Resources */,
 				62B707CE1AAFD4730031A941 /* LaunchScreen.xib in Resources */,
 				62B707CB1AAFD4730031A941 /* Images.xcassets in Resources */,
 				62B707F11AAFEFE20031A941 /* avatar_placeholder.png in Resources */,
-				62B707EA1AAFEB500031A941 /* PersonCollectionViewCell.xib in Resources */,
+				62B707EA1AAFEB500031A941 /* PersonCollectionViewCellDetails.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -346,6 +355,7 @@
 			files = (
 				62B707C61AAFD4730031A941 /* ViewController.m in Sources */,
 				62B707C31AAFD4730031A941 /* AppDelegate.m in Sources */,
+				62B707FA1AB0972E0031A941 /* PersonCollectionReusableView.m in Sources */,
 				62B707E61AAFE9A10031A941 /* Person.m in Sources */,
 				62B707F51AAFF1860031A941 /* ArrayCollectionViewDataSource.m in Sources */,
 				62B707C01AAFD4730031A941 /* main.m in Sources */,

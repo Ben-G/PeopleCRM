@@ -30,7 +30,7 @@
   @weakify(self)
   // Do any additional setup after loading the view, typically from a nib.
   
-  self.dataSource = [[ArrayCollectionViewDataSource alloc] initWithNibFile:@"PersonCollectionViewCell" configureCellBlock:^(id cell, id item) {
+  self.dataSource = [[ArrayCollectionViewDataSource alloc] initWithNibFile:@"PersonCollectionReusableView" configureCellBlock:^(id cell, id item) {
     
   }];
   
