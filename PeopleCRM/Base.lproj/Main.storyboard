@@ -40,6 +40,7 @@
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="sBT-qI-edC"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="addPersonButton" destination="sBT-qI-edC" id="eAu-EN-TLh"/>
                         <outlet property="collectionView" destination="nWv-QB-J0q" id="Tfr-rZ-TPd"/>
                     </connections>
                 </viewController>
