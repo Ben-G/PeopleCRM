@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7515.2" systemVersion="14B25" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7512"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="UICollectionReusableView">
+            <rect key="frame" x="0.0" y="0.0" width="300" height="210"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benjamin Encz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000027" translatesAutoresizingMaskIntoConstraints="NO" id="J08-ff-25u">
+                    <rect key="frame" x="111" y="8" width="181" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="DVv-We-evN"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="19"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="hyP-9F-KbR">
+                    <rect key="frame" x="8" y="8" width="95" height="95"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="95" id="fsj-3Y-qUL"/>
+                        <constraint firstAttribute="width" constant="95" id="uUt-dY-hJ2"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Met him at NSMeetup. Cool person! Should chat again soon! " lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lex-J5-oue">
+                    <rect key="frame" x="111" y="37" width="181" height="61"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@benjaminencz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpY-aR-ckt">
+                    <rect key="frame" x="53" y="133" width="181" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gWV-JO-iZN">
+                    <rect key="frame" x="242" y="180" width="50" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="50" id="WIa-tp-I73"/>
+                    </constraints>
+                    <state key="normal" title="Edit">
+                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="jfy-js-b9u">
+                    <rect key="frame" x="8" y="128" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="0NQ-PL-BJf"/>
+                        <constraint firstAttribute="height" constant="30" id="83h-oT-1Fq"/>
+                    </constraints>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="0iq-Hh-fLF">
+                    <rect key="frame" x="8" y="170" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="noU-Tx-IPM"/>
+                        <constraint firstAttribute="height" constant="30" id="qwD-Gn-84v"/>
+                    </constraints>
+                </imageView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ben-G" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aW3-Ep-N1j">
+                    <rect key="frame" x="53" y="174" width="51" height="21"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="OpY-aR-ckt" firstAttribute="centerY" secondItem="jfy-js-b9u" secondAttribute="centerY" id="09O-7z-RQU"/>
+                <constraint firstAttribute="trailing" secondItem="J08-ff-25u" secondAttribute="trailing" constant="8" id="1J7-II-snJ"/>
+                <constraint firstItem="0iq-Hh-fLF" firstAttribute="top" secondItem="jfy-js-b9u" secondAttribute="bottom" constant="12" id="83F-x9-N1B"/>
+                <constraint firstAttribute="trailing" secondItem="OpY-aR-ckt" secondAttribute="trailing" constant="66" id="MhA-fq-TMh"/>
+                <constraint firstItem="OpY-aR-ckt" firstAttribute="leading" secondItem="jfy-js-b9u" secondAttribute="trailing" constant="15" id="Qtw-kb-K7w"/>
+                <constraint firstAttribute="bottom" secondItem="gWV-JO-iZN" secondAttribute="bottom" id="Tg8-N0-x6Y"/>
+                <constraint firstItem="jfy-js-b9u" firstAttribute="top" secondItem="hyP-9F-KbR" secondAttribute="bottom" constant="18" id="Wls-37-vwX"/>
+                <constraint firstAttribute="trailing" secondItem="Lex-J5-oue" secondAttribute="trailing" constant="8" id="Xkv-oq-VMi"/>
+                <constraint firstItem="OpY-aR-ckt" firstAttribute="top" secondItem="hyP-9F-KbR" secondAttribute="bottom" constant="20" id="aNj-lg-Sbi"/>
+                <constraint firstItem="J08-ff-25u" firstAttribute="leading" secondItem="hyP-9F-KbR" secondAttribute="trailing" constant="8" id="f2j-tR-kLH"/>
+                <constraint firstAttribute="trailing" secondItem="gWV-JO-iZN" secondAttribute="trailing" constant="8" id="hdr-vP-zhb"/>
+                <constraint firstItem="gWV-JO-iZN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aW3-Ep-N1j" secondAttribute="trailing" constant="28" id="ifA-bd-xea"/>
+                <constraint firstItem="jfy-js-b9u" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="iq2-TZ-TbP"/>
+                <constraint firstItem="hyP-9F-KbR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="ixJ-xH-PzR"/>
+                <constraint firstItem="J08-ff-25u" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="jQQ-eb-UJ6"/>
+                <constraint firstItem="Lex-J5-oue" firstAttribute="top" secondItem="J08-ff-25u" secondAttribute="bottom" constant="8" id="jpG-s3-4A2"/>
+                <constraint firstItem="0iq-Hh-fLF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="nH8-mp-Iju"/>
+                <constraint firstItem="hyP-9F-KbR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="oeR-9B-qBT"/>
+                <constraint firstItem="Lex-J5-oue" firstAttribute="leading" secondItem="hyP-9F-KbR" secondAttribute="trailing" constant="8" id="pO2-BQ-j9J"/>
+                <constraint firstAttribute="bottom" secondItem="0iq-Hh-fLF" secondAttribute="bottom" constant="10" id="uqn-Ks-hwr"/>
+                <constraint firstItem="aW3-Ep-N1j" firstAttribute="centerY" secondItem="0iq-Hh-fLF" secondAttribute="centerY" id="yYu-Sh-Wea"/>
+                <constraint firstItem="aW3-Ep-N1j" firstAttribute="leading" secondItem="0iq-Hh-fLF" secondAttribute="trailing" constant="15" id="z0h-dy-imq"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="Wls-37-vwX"/>
+                    <exclude reference="aNj-lg-Sbi"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="258.5" y="162.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="avatar_placeholder.png" width="512" height="512"/>
+        <image name="github_logo.png" width="256" height="256"/>
+        <image name="twitter_logo.png" width="1139" height="926"/>
+    </resources>
+</document>

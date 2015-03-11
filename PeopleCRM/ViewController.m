@@ -7,8 +7,14 @@
 //
 
 #import "ViewController.h"
+#import "ReactiveCocoa.h"
+#import "ArrayCollectionViewDataSource.h"
 
 @interface ViewController ()
+
+@property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
+@property (strong, nonatomic) ArrayCollectionViewDataSource *dataSource;
+@property (strong) NSArray *people;
 
 @end
 
@@ -17,6 +23,18 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   // Do any additional setup after loading the view, typically from a nib.
+  
+  self.dataSource = [[ArrayCollectionViewDataSource alloc] initWithNibFile:@"PersonCollectionViewCell" configureCellBlock:^(id cell, id item) {
+    
+  }];
+  
+  self.collectionView.dataSource = self.dataSource;
+  
+  RAC(self.dataSource, items) = [RACObserve(self, people) doNext:^(id x) {
+    [self.collectionView reloadData];
+  }];
+  
+  self.people = @[@1, @2, @3, @4];
 }
 
 - (void)didReceiveMemoryWarning {

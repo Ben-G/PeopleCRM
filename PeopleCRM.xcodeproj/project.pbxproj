@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0552F70201608093658384F4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C12E98B00774ED31D5AB2885 /* libPods.a */; };
 		62B707C01AAFD4730031A941 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707BF1AAFD4730031A941 /* main.m */; };
 		62B707C31AAFD4730031A941 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707C21AAFD4730031A941 /* AppDelegate.m */; };
 		62B707C61AAFD4730031A941 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707C51AAFD4730031A941 /* ViewController.m */; };
@@ -14,6 +15,12 @@
 		62B707CB1AAFD4730031A941 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62B707CA1AAFD4730031A941 /* Images.xcassets */; };
 		62B707CE1AAFD4730031A941 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62B707CC1AAFD4730031A941 /* LaunchScreen.xib */; };
 		62B707DA1AAFD4730031A941 /* PeopleCRMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707D91AAFD4730031A941 /* PeopleCRMTests.m */; };
+		62B707E61AAFE9A10031A941 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707E51AAFE9A10031A941 /* Person.m */; };
+		62B707EA1AAFEB500031A941 /* PersonCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62B707E91AAFEB500031A941 /* PersonCollectionViewCell.xib */; };
+		62B707EE1AAFED690031A941 /* github_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B707EC1AAFED690031A941 /* github_logo.png */; };
+		62B707EF1AAFED690031A941 /* twitter_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B707ED1AAFED690031A941 /* twitter_logo.png */; };
+		62B707F11AAFEFE20031A941 /* avatar_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B707F01AAFEFE20031A941 /* avatar_placeholder.png */; };
+		62B707F51AAFF1860031A941 /* ArrayCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707F41AAFF1860031A941 /* ArrayCollectionViewDataSource.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +34,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		14D50F521CA2E326C9824B36 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		62B707BA1AAFD4730031A941 /* PeopleCRM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleCRM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62B707BE1AAFD4730031A941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62B707BF1AAFD4730031A941 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -40,6 +48,16 @@
 		62B707D31AAFD4730031A941 /* PeopleCRMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PeopleCRMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		62B707D81AAFD4730031A941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62B707D91AAFD4730031A941 /* PeopleCRMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeopleCRMTests.m; sourceTree = "<group>"; };
+		62B707E41AAFE9A10031A941 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		62B707E51AAFE9A10031A941 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
+		62B707E91AAFEB500031A941 /* PersonCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCollectionViewCell.xib; sourceTree = "<group>"; };
+		62B707EC1AAFED690031A941 /* github_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = github_logo.png; sourceTree = "<group>"; };
+		62B707ED1AAFED690031A941 /* twitter_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_logo.png; sourceTree = "<group>"; };
+		62B707F01AAFEFE20031A941 /* avatar_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_placeholder.png; sourceTree = "<group>"; };
+		62B707F31AAFF1860031A941 /* ArrayCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayCollectionViewDataSource.h; sourceTree = "<group>"; };
+		62B707F41AAFF1860031A941 /* ArrayCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayCollectionViewDataSource.m; sourceTree = "<group>"; };
+		671CA53971DA7818CC90A69F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		C12E98B00774ED31D5AB2885 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,6 +65,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0552F70201608093658384F4 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,12 +79,23 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2A1FA1D24015F32953882849 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C12E98B00774ED31D5AB2885 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		62B707B11AAFD4730031A941 = {
 			isa = PBXGroup;
 			children = (
+				62B707EB1AAFED690031A941 /* Assets */,
 				62B707BC1AAFD4730031A941 /* PeopleCRM */,
 				62B707D61AAFD4730031A941 /* PeopleCRMTests */,
 				62B707BB1AAFD4730031A941 /* Products */,
+				DB7529FF25907ABDE2BD1E1A /* Pods */,
+				2A1FA1D24015F32953882849 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -81,6 +111,9 @@
 		62B707BC1AAFD4730031A941 /* PeopleCRM */ = {
 			isa = PBXGroup;
 			children = (
+				62B707F21AAFF0FB0031A941 /* Components */,
+				62B707E71AAFEB3A0031A941 /* Views */,
+				62B707E31AAFE9910031A941 /* Models */,
 				62B707C11AAFD4730031A941 /* AppDelegate.h */,
 				62B707C21AAFD4730031A941 /* AppDelegate.m */,
 				62B707C41AAFD4730031A941 /* ViewController.h */,
@@ -119,6 +152,59 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		62B707E31AAFE9910031A941 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				62B707E41AAFE9A10031A941 /* Person.h */,
+				62B707E51AAFE9A10031A941 /* Person.m */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		62B707E71AAFEB3A0031A941 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				62B707E81AAFEB3A0031A941 /* PersonCollectionViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		62B707E81AAFEB3A0031A941 /* PersonCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				62B707E91AAFEB500031A941 /* PersonCollectionViewCell.xib */,
+			);
+			path = PersonCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		62B707EB1AAFED690031A941 /* Assets */ = {
+			isa = PBXGroup;
+			children = (
+				62B707F01AAFEFE20031A941 /* avatar_placeholder.png */,
+				62B707EC1AAFED690031A941 /* github_logo.png */,
+				62B707ED1AAFED690031A941 /* twitter_logo.png */,
+			);
+			path = Assets;
+			sourceTree = "<group>";
+		};
+		62B707F21AAFF0FB0031A941 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				62B707F31AAFF1860031A941 /* ArrayCollectionViewDataSource.h */,
+				62B707F41AAFF1860031A941 /* ArrayCollectionViewDataSource.m */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DB7529FF25907ABDE2BD1E1A /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				14D50F521CA2E326C9824B36 /* Pods.debug.xcconfig */,
+				671CA53971DA7818CC90A69F /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -126,9 +212,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62B707DD1AAFD4730031A941 /* Build configuration list for PBXNativeTarget "PeopleCRM" */;
 			buildPhases = (
+				3ECD9C168080B176ECC1DAEF /* Check Pods Manifest.lock */,
 				62B707B61AAFD4730031A941 /* Sources */,
 				62B707B71AAFD4730031A941 /* Frameworks */,
 				62B707B81AAFD4730031A941 /* Resources */,
+				9FE653F8A194FF6EF0BEA2D2 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -199,9 +287,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				62B707EF1AAFED690031A941 /* twitter_logo.png in Resources */,
+				62B707EE1AAFED690031A941 /* github_logo.png in Resources */,
 				62B707C91AAFD4730031A941 /* Main.storyboard in Resources */,
 				62B707CE1AAFD4730031A941 /* LaunchScreen.xib in Resources */,
 				62B707CB1AAFD4730031A941 /* Images.xcassets in Resources */,
+				62B707F11AAFEFE20031A941 /* avatar_placeholder.png in Resources */,
+				62B707EA1AAFEB500031A941 /* PersonCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -214,6 +306,39 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3ECD9C168080B176ECC1DAEF /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		9FE653F8A194FF6EF0BEA2D2 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		62B707B61AAFD4730031A941 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -221,6 +346,8 @@
 			files = (
 				62B707C61AAFD4730031A941 /* ViewController.m in Sources */,
 				62B707C31AAFD4730031A941 /* AppDelegate.m in Sources */,
+				62B707E61AAFE9A10031A941 /* Person.m in Sources */,
+				62B707F51AAFF1860031A941 /* ArrayCollectionViewDataSource.m in Sources */,
 				62B707C01AAFD4730031A941 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -345,6 +472,7 @@
 		};
 		62B707DE1AAFD4730031A941 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 14D50F521CA2E326C9824B36 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PeopleCRM/Info.plist;
@@ -355,6 +483,7 @@
 		};
 		62B707DF1AAFD4730031A941 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 671CA53971DA7818CC90A69F /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PeopleCRM/Info.plist;
@@ -416,6 +545,7 @@
 				62B707DF1AAFD4730031A941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		62B707E01AAFD4730031A941 /* Build configuration list for PBXNativeTarget "PeopleCRMTests" */ = {
 			isa = XCConfigurationList;
@@ -424,6 +554,7 @@
 				62B707E21AAFD4730031A941 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
