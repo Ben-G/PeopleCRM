@@ -7,30 +7,54 @@
 //
 
 #import "PersonCollectionReusableView.h"
-
+#import "ReactiveCocoa.h"
 
 @interface PersonCollectionReusableView()
 
 @property (weak, nonatomic) IBOutlet UIView *innerContentView;
+@property (weak, nonatomic) IBOutlet UIButton *editButton;
+@property (strong, nonatomic) UIView *presentedView;
 
 @end
 
 @implementation PersonCollectionReusableView
 
-- (id)initWithCoder:(NSCoder *)aDecoder {
-  self = [super initWithCoder:aDecoder];
-  
-  if (self) {
-
-  }
-  
-  return self;
-}
-
 - (void)awakeFromNib {
-  UIView *subview = [[[NSBundle mainBundle] loadNibNamed:@"PersonCollectionViewCellDetails" owner:self options:nil] objectAtIndex:0];
+  RACSignal *enabledSignal = [RACObserve(self, UIState) map:^id(NSNumber *state) {
+    if ([state integerValue] == PersonCollectionReusableViewStateDetails) {
+      return @(YES);
+    } else {
+      return @(NO);
+    }
+  }];
   
-  [self.innerContentView addSubview:subview];
+  [RACObserve(self, editButton) subscribeNext:^(UIButton *editButton) {
+    editButton.rac_command = [[RACCommand alloc] initWithEnabled:enabledSignal signalBlock:^RACSignal *(id input) {
+      self.UIState = @(PersonCollectionReusableViewStateAddingStep1);
+      return [RACSignal empty];
+    }];
+  }];
+  
+  self.UIState = @(PersonCollectionReusableViewStateDetails);
+
+  RAC(self, presentedView) = [RACObserve(self, UIState) map:^id(NSNumber *state) {
+    switch ([state integerValue]) {
+      case PersonCollectionReusableViewStateDetails:
+        return [[[NSBundle mainBundle] loadNibNamed:@"PersonCollectionViewCellDetails" owner:self options:nil] objectAtIndex:0];
+        break;
+      case PersonCollectionReusableViewStateAddingStep1:
+        return [[[NSBundle mainBundle] loadNibNamed:@"PersonCollectionViewAdding" owner:self options:nil] objectAtIndex:0];
+        break;
+      default:
+        return nil;
+        break;
+    }
+  }];
+  
+  [RACObserve(self, presentedView) subscribeNext:^(UIView *newView) {
+    [self.innerContentView.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
+    [self.innerContentView addSubview:newView];
+  }];
 }
 
 @end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0552F70201608093658384F4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C12E98B00774ED31D5AB2885 /* libPods.a */; };
+		625B89211AB12E8300744BA4 /* PersonCollectionViewAdding.xib in Resources */ = {isa = PBXBuildFile; fileRef = 625B89201AB12E8300744BA4 /* PersonCollectionViewAdding.xib */; };
 		62B707C01AAFD4730031A941 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707BF1AAFD4730031A941 /* main.m */; };
 		62B707C31AAFD4730031A941 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707C21AAFD4730031A941 /* AppDelegate.m */; };
 		62B707C61AAFD4730031A941 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707C51AAFD4730031A941 /* ViewController.m */; };
@@ -37,6 +38,7 @@
 
 /* Begin PBXFileReference section */
 		14D50F521CA2E326C9824B36 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		625B89201AB12E8300744BA4 /* PersonCollectionViewAdding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCollectionViewAdding.xib; sourceTree = "<group>"; };
 		62B707BA1AAFD4730031A941 /* PeopleCRM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleCRM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62B707BE1AAFD4730031A941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62B707BF1AAFD4730031A941 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -181,6 +183,7 @@
 				62B707F61AB096D20031A941 /* PersonCollectionReusableView.xib */,
 				62B707F81AB0972E0031A941 /* PersonCollectionReusableView.h */,
 				62B707F91AB0972E0031A941 /* PersonCollectionReusableView.m */,
+				625B89201AB12E8300744BA4 /* PersonCollectionViewAdding.xib */,
 			);
 			path = PersonCollectionViewCell;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 				62B707CB1AAFD4730031A941 /* Images.xcassets in Resources */,
 				62B707F11AAFEFE20031A941 /* avatar_placeholder.png in Resources */,
 				62B707EA1AAFEB500031A941 /* PersonCollectionViewCellDetails.xib in Resources */,
+				625B89211AB12E8300744BA4 /* PersonCollectionViewAdding.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
