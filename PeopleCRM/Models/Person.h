@@ -8,19 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
-// TODO: next step: move this into view model
-typedef NS_ENUM(NSInteger, PersonCollectionReusableViewState) {
-  PersonCollectionReusableViewStateAddingStep1,
-  PersonCollectionReusableViewStateAddingStep2Twitter,
-  PersonCollectionReusableViewStateAddingStep2Github,
-  PersonCollectionReusableViewStateDetails
-};
-
 @interface Person : NSObject
 
 @property (copy) NSString *name;
 @property (copy) NSString *twitterUsername;
 @property (copy) NSString *notes;
-@property (strong) NSNumber *UIState;
 
 @end

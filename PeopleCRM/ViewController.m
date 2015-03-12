@@ -11,6 +11,7 @@
 #import "ArrayCollectionViewDataSource.h"
 #import "Person.h"
 #import "PersonCollectionReusableView.h"
+#import "PersonCollectionReusableViewModel.h"
 
 @interface ViewController ()
 
@@ -32,8 +33,8 @@
   @weakify(self)
   // Do any additional setup after loading the view, typically from a nib.
   
-  self.dataSource = [[ArrayCollectionViewDataSource alloc] initWithNibFile:@"PersonCollectionReusableView" configureCellBlock:^(PersonCollectionReusableView *cell, Person *person) {
-      cell.person = person;
+  self.dataSource = [[ArrayCollectionViewDataSource alloc] initWithNibFile:@"PersonCollectionReusableView" configureCellBlock:^(PersonCollectionReusableView *cell, PersonCollectionReusableViewModel *viewModel) {
+      cell.viewModel = viewModel;
   }];
   
   self.collectionView.dataSource = self.dataSource;
@@ -46,7 +47,7 @@
   self.addPersonButton.rac_command = [[RACCommand alloc] initWithEnabled:self.editModeSignal signalBlock:^RACSignal *(id input) {
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
       @strongify(self);
-      Person *person = [Person new];
+      PersonCollectionReusableViewModel *person = [[PersonCollectionReusableViewModel alloc] initWithModel:[Person new]];
       self.people = [@[person] arrayByAddingObjectsFromArray:self.people];
       [subscriber sendCompleted];
       
@@ -54,10 +55,10 @@
     }];
   }];
   
-  Person *person1 = [Person new];
-  Person *person2 = [Person new];
-  Person *person3 = [Person new];
-  Person *person4 = [Person new];
+  PersonCollectionReusableViewModel *person1 = [[PersonCollectionReusableViewModel alloc] initWithModel:[Person new]];
+  PersonCollectionReusableViewModel *person2 = [[PersonCollectionReusableViewModel alloc] initWithModel:[Person new]];
+  PersonCollectionReusableViewModel *person3 = [[PersonCollectionReusableViewModel alloc] initWithModel:[Person new]];
+  PersonCollectionReusableViewModel *person4 = [[PersonCollectionReusableViewModel alloc] initWithModel:[Person new]];
   
   self.people = @[person1, person2, person3, person4];
 }

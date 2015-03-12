@@ -7,10 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "Person.h"
+
+@class PersonCollectionReusableViewModel;
 
 @interface PersonCollectionReusableView : UICollectionReusableView
 
-@property (strong, nonatomic) Person *person;
+@property (strong, nonatomic) PersonCollectionReusableViewModel *viewModel;
 
 @end

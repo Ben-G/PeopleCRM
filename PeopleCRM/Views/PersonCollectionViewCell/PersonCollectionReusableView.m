@@ -8,6 +8,7 @@
 
 #import "PersonCollectionReusableView.h"
 #import "ReactiveCocoa.h"
+#import "PersonCollectionReusableViewModel.h"
 
 @interface PersonCollectionReusableView()
 
@@ -15,34 +16,16 @@
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
 @property (strong, nonatomic) UIView *presentedView;
 
-@property (strong, nonatomic) RACDisposable *personUIStateDisposal;
-
 @end
 
 @implementation PersonCollectionReusableView
 
 - (void)awakeFromNib {
-  RACSignal *enabledSignal = [RACObserve(self, person.UIState) map:^id(NSNumber *state) {
-    if ([state integerValue] == PersonCollectionReusableViewStateDetails) {
-      return @(YES);
-    } else {
-      return @(NO);
-    }
-  }];
-  
   [RACObserve(self, editButton) subscribeNext:^(UIButton *editButton) {
-    editButton.rac_command = [[RACCommand alloc] initWithEnabled:enabledSignal signalBlock:^RACSignal *(id input) {
-      return [RACSignal return:@(YES)];
-    }];
-    
-    [self.personUIStateDisposal dispose];
-    
-    self.personUIStateDisposal = [[self.editButton.rac_command.executionSignals map:^id(id value) {
-      return @(PersonCollectionReusableViewStateAddingStep1);
-    }] setKeyPath:@"person.UIState" onObject:self];
+    editButton.rac_command = self.viewModel.editButtonCommand;
   }];
   
-  RAC(self, presentedView) = [RACObserve(self, person.UIState) map:^id(NSNumber *state) {
+  RAC(self, presentedView) = [RACObserve(self, viewModel.UIState) map:^id(NSNumber *state) {
     switch ([state integerValue]) {
       case PersonCollectionReusableViewStateDetails:
         return [[[NSBundle mainBundle] loadNibNamed:@"PersonCollectionViewCellDetails" owner:self options:nil] objectAtIndex:0];

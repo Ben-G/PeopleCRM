@@ -10,14 +10,4 @@
 
 @implementation Person
 
-- (id)init {
-  self = [super init];
-  
-  if (self) {
-    self.UIState = @(PersonCollectionReusableViewStateDetails);
-  }
-  
-  return self;
-}
-
 @end
