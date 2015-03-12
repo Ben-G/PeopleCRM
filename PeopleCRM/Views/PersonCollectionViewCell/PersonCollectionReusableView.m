@@ -15,6 +15,8 @@
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
 @property (strong, nonatomic) UIView *presentedView;
 
+@property (strong, nonatomic) RACDisposable *personUIStateDisposal;
+
 @end
 
 @implementation PersonCollectionReusableView
@@ -30,9 +32,14 @@
   
   [RACObserve(self, editButton) subscribeNext:^(UIButton *editButton) {
     editButton.rac_command = [[RACCommand alloc] initWithEnabled:enabledSignal signalBlock:^RACSignal *(id input) {
-      self.person.UIState = @(PersonCollectionReusableViewStateAddingStep1);
-      return [RACSignal empty];
+      return [RACSignal return:@(YES)];
     }];
+    
+    [self.personUIStateDisposal dispose];
+    
+    self.personUIStateDisposal = [[self.editButton.rac_command.executionSignals map:^id(id value) {
+      return @(PersonCollectionReusableViewStateAddingStep1);
+    }] setKeyPath:@"person.UIState" onObject:self];
   }];
   
   RAC(self, presentedView) = [RACObserve(self, person.UIState) map:^id(NSNumber *state) {
