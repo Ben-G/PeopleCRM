@@ -20,7 +20,7 @@
 @implementation PersonCollectionReusableView
 
 - (void)awakeFromNib {
-  RACSignal *enabledSignal = [RACObserve(self, UIState) map:^id(NSNumber *state) {
+  RACSignal *enabledSignal = [RACObserve(self, person.UIState) map:^id(NSNumber *state) {
     if ([state integerValue] == PersonCollectionReusableViewStateDetails) {
       return @(YES);
     } else {
@@ -30,14 +30,12 @@
   
   [RACObserve(self, editButton) subscribeNext:^(UIButton *editButton) {
     editButton.rac_command = [[RACCommand alloc] initWithEnabled:enabledSignal signalBlock:^RACSignal *(id input) {
-      self.UIState = @(PersonCollectionReusableViewStateAddingStep1);
+      self.person.UIState = @(PersonCollectionReusableViewStateAddingStep1);
       return [RACSignal empty];
     }];
   }];
   
-  self.UIState = @(PersonCollectionReusableViewStateDetails);
-
-  RAC(self, presentedView) = [RACObserve(self, UIState) map:^id(NSNumber *state) {
+  RAC(self, presentedView) = [RACObserve(self, person.UIState) map:^id(NSNumber *state) {
     switch ([state integerValue]) {
       case PersonCollectionReusableViewStateDetails:
         return [[[NSBundle mainBundle] loadNibNamed:@"PersonCollectionViewCellDetails" owner:self options:nil] objectAtIndex:0];

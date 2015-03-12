@@ -7,19 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-
-@class Person;
-
-typedef NS_ENUM(NSInteger, PersonCollectionReusableViewState) {
-  PersonCollectionReusableViewStateAddingStep1,
-  PersonCollectionReusableViewStateAddingStep2Twitter,
-  PersonCollectionReusableViewStateAddingStep2Github,
-  PersonCollectionReusableViewStateDetails
-};
+#import "Person.h"
 
 @interface PersonCollectionReusableView : UICollectionReusableView
 
-@property (assign, nonatomic) NSNumber *UIState;
 @property (strong, nonatomic) Person *person;
 
 @end
