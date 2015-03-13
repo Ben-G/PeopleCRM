@@ -35,6 +35,10 @@
       return [RACSignal return:@(YES)];
     }];
     
+    self.addTwitterButtonCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+      return [RACSignal return:@(YES)];
+    }];
+
     [self.personUIStateDisposal dispose];
     
     self.personUIStateDisposal = [[self.editButtonCommand.executionSignals map:^id(id value) {

@@ -30,3 +30,9 @@
 #define COCOAPODS_VERSION_MINOR_ReactiveCocoa_no_arc 4
 #define COCOAPODS_VERSION_PATCH_ReactiveCocoa_no_arc 7
 
+// STTwitter
+#define COCOAPODS_POD_AVAILABLE_STTwitter
+#define COCOAPODS_VERSION_MAJOR_STTwitter 0
+#define COCOAPODS_VERSION_MINOR_STTwitter 1
+#define COCOAPODS_VERSION_PATCH_STTwitter 9
+

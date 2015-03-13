@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UIView *innerContentView;
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
+@property (weak, nonatomic) IBOutlet UIButton *addTwitterButton;
 @property (strong, nonatomic) UIView *presentedView;
 
 @end
@@ -23,6 +24,10 @@
 - (void)awakeFromNib {
   [RACObserve(self, editButton) subscribeNext:^(UIButton *editButton) {
     editButton.rac_command = self.viewModel.editButtonCommand;
+  }];
+  
+  [RACObserve(self, addTwitterButton) subscribeNext:^(UIButton *addTwitterButton) {
+    addTwitterButton.rac_command = self.viewModel.addTwitterButtonCommand;
   }];
   
   RAC(self, presentedView) = [RACObserve(self, viewModel.UIState) map:^id(NSNumber *state) {

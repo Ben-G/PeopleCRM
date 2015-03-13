@@ -1,1 +1,2 @@
 pod 'ReactiveCocoa'
+pod 'STTwitter'
