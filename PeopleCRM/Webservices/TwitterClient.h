@@ -7,9 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "ReactiveCocoa.h"
 
 @interface TwitterClient : NSObject
 
-+ (void)avatarForUsername:(NSString *)username;
++ (RACSignal *)avatarForUsername:(NSString *)username;
 
 @end

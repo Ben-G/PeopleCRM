@@ -15,6 +15,7 @@
 @property (weak, nonatomic) IBOutlet UIView *innerContentView;
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
 @property (weak, nonatomic) IBOutlet UIButton *addTwitterButton;
+@property (weak, nonatomic) IBOutlet UIImageView *avatar;
 @property (strong, nonatomic) UIView *presentedView;
 
 @end
@@ -42,6 +43,12 @@
         return nil;
         break;
     }
+  }];
+  
+  [RACObserve(self, viewModel.avatarSignal) subscribeNext:^(id x) {
+    RAC(self, avatar.image) = [[self.viewModel.avatarSignal deliverOnMainThread] doNext:^(id x) {
+      
+    }];
   }];
   
   [RACObserve(self, presentedView) subscribeNext:^(UIView *newView) {

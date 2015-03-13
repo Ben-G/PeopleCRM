@@ -25,6 +25,7 @@ typedef NS_ENUM(NSInteger, PersonCollectionReusableViewState) {
 @property (strong) Person *person;
 @property (strong) RACCommand *editButtonCommand;
 @property (strong) RACCommand *addTwitterButtonCommand;
+@property (strong) RACSignal *avatarSignal;
 
 - (id)initWithModel:(Person *)person;
 

@@ -37,8 +37,11 @@
     }];
     
     self.addTwitterButtonCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-      [TwitterClient avatarForUsername:@""];
-      return [RACSignal return:@(YES)];
+      return [TwitterClient avatarForUsername:@""];
+    }];
+    
+    [self.addTwitterButtonCommand.executionSignals subscribeNext:^(id x) {
+      self.avatarSignal = x;
     }];
 
     [self.personUIStateDisposal dispose];
