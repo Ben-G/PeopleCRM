@@ -61,5 +61,69 @@
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PeopleCRM/Views/PersonCollectionViewCell/PersonCollectionReusableView.m"
+            timestampString = "447970728.016207"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "55"
+            endingLineNumber = "55"
+            landmarkName = "-awakeFromNib"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PeopleCRM/Views/PersonCollectionViewCell/PersonCollectionReusableView.m"
+            timestampString = "447970763.483634"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "-awakeFromNib"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__44-[PersonCollectionReusableView awakeFromNib]_block_invoke51"
+                  moduleName = "PeopleCRM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/benjaminencz/Development/Private/PeopleCRM/PeopleCRM/PeopleCRM/Views/PersonCollectionViewCell/PersonCollectionReusableView.m"
+                  timestampString = "447970763.486327"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "44">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__44-[PersonCollectionReusableView awakeFromNib]_block_invoke_2"
+                  moduleName = "PeopleCRM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/benjaminencz/Development/Private/PeopleCRM/PeopleCRM/PeopleCRM/Views/PersonCollectionViewCell/PersonCollectionReusableView.m"
+                  timestampString = "447970763.48651"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "44">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

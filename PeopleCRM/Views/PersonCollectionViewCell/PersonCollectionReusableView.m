@@ -45,7 +45,12 @@
     }
   }];
   
-  [RACObserve(self, viewModel.avatarSignal) subscribeNext:^(id x) {
+  RACSignal *avatarSignalChangeSignal = RACObserve(self, viewModel.avatarSignal);
+  RACSignal *imageViewChangeSignal = RACObserve(self, avatar);
+  
+  RACSignal *imageBindSignal = [avatarSignalChangeSignal merge:imageViewChangeSignal];
+  
+  [imageBindSignal subscribeNext:^(id x) {
     RAC(self, avatar.image) = [[self.viewModel.avatarSignal deliverOnMainThread] doNext:^(id x) {
       
     }];
