@@ -8,6 +8,7 @@
 
 #import "PersonCollectionReusableViewModel.h"
 #import "Person.h"
+#import "TwitterClient.h"
 
 @interface PersonCollectionReusableViewModel()
 
@@ -36,6 +37,7 @@
     }];
     
     self.addTwitterButtonCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+      [TwitterClient avatarForUsername:@""];
       return [RACSignal return:@(YES)];
     }];
 
