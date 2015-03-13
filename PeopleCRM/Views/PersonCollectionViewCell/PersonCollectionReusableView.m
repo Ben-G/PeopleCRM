@@ -51,6 +51,7 @@
   RACSignal *imageBindSignal = [avatarSignalChangeSignal merge:imageViewChangeSignal];
   
   [imageBindSignal subscribeNext:^(id x) {
+    //TODO: check wether signal or imageview changed
     RAC(self, avatar.image) = [[self.viewModel.avatarSignal deliverOnMainThread] doNext:^(id x) {
       
     }];
