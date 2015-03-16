@@ -14,10 +14,14 @@
 @implementation TwitterClient
 
 + (RACSignal *)avatarForUsername:(NSString *)username {
-  return [[[TwitterClient _login]
+  RACScheduler *bgScheduler = [RACScheduler scheduler];
+  
+  return [[[[[TwitterClient _login]
+    deliverOn:bgScheduler]
     flattenMap:^RACStream *(STTwitterAPI *client) {
     return [self client:client fetchUserInfo:username];
-  }] flattenMap:^RACStream *(NSDictionary *userInfo) {
+  }]
+    deliverOn:bgScheduler] flattenMap:^RACStream *(NSDictionary *userInfo) {
     return [self imageFromURLString:userInfo[@"profile_image_url_https"]];
   }];
 }
@@ -40,13 +44,6 @@
 
 //TODO: move image download out
 + (RACSignal *)imageFromURLString:(NSString *)urlString {
-//  NSURLRequest *urlRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:urlString]];
-//  AFHTTPRequestOperation *requestOperation = [[AFHTTPRequestOperation alloc] initWithRequest:urlRequest];
-//  requestOperation.responseSerializer = [AFImageResponseSerializer serializer];
-//  
-//  requestOperation racg
-  
-  
   AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]
                                             initWithBaseURL:nil];
   manager.responseSerializer = [AFImageResponseSerializer serializer];
