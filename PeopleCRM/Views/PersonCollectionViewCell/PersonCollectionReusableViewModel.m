@@ -10,12 +10,6 @@
 #import "Person.h"
 #import "TwitterClient.h"
 
-@interface PersonCollectionReusableViewModel()
-
-@property (strong, nonatomic) RACDisposable *personUIStateDisposal;
-
-@end
-
 @implementation PersonCollectionReusableViewModel
 
 - (id)initWithModel:(Person *)person {
@@ -43,12 +37,14 @@
     [self.addTwitterButtonCommand.executionSignals subscribeNext:^(id x) {
       self.avatarSignal = x;
     }];
-
-    [self.personUIStateDisposal dispose];
     
-    self.personUIStateDisposal = [[self.editButtonCommand.executionSignals map:^id(id value) {
-      return @(PersonCollectionReusableViewStateAddingStep1);
-    }] setKeyPath:@"UIState" onObject:self];
+    [[self.addTwitterButtonCommand.executionSignals concat] subscribeNext:^(id x) {
+      self.UIState = @(PersonCollectionReusableViewStateDetails);
+    }];
+    
+    [[self.editButtonCommand.executionSignals concat] subscribeNext:^(id x) {
+      self.UIState = @(PersonCollectionReusableViewStateAddingStep1);
+    }];
   }
   
   return self;

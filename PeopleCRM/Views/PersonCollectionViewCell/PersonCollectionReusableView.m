@@ -18,11 +18,15 @@
 @property (weak, nonatomic) IBOutlet UIImageView *avatar;
 @property (strong, nonatomic) UIView *presentedView;
 
+@property (strong, nonatomic) RACDisposable *avatarDisposable;
+
 @end
 
 @implementation PersonCollectionReusableView
 
 - (void)awakeFromNib {
+  @weakify(self)
+  
   [RACObserve(self, editButton) subscribeNext:^(UIButton *editButton) {
     editButton.rac_command = self.viewModel.editButtonCommand;
   }];
@@ -51,10 +55,11 @@
   RACSignal *imageBindSignal = [avatarSignalChangeSignal merge:imageViewChangeSignal];
   
   [imageBindSignal subscribeNext:^(id x) {
+    @strongify(self)
     //TODO: check wether signal or imageview changed
-    RAC(self, avatar.image) = [[self.viewModel.avatarSignal deliverOnMainThread] doNext:^(id x) {
-      
-    }];
+    [self.avatarDisposable dispose];
+    self.avatarDisposable =
+    [[self.viewModel.avatarSignal deliverOnMainThread] setKeyPath:@"avatar.image" onObject:self];
   }];
   
   [RACObserve(self, presentedView) subscribeNext:^(UIView *newView) {
