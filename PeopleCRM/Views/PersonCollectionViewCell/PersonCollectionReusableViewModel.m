@@ -38,13 +38,18 @@
       self.avatarSignal = x;
     }];
     
-    [[self.addTwitterButtonCommand.executionSignals concat] subscribeNext:^(id x) {
-      self.UIState = @(PersonCollectionReusableViewStateDetails);
+    
+    RACSignal *UIStateSignal1 = [[self.addTwitterButtonCommand.executionSignals concat] map:^id(id value) {
+      return @(PersonCollectionReusableViewStateDetails);
     }];
     
-    [[self.editButtonCommand.executionSignals concat] subscribeNext:^(id x) {
-      self.UIState = @(PersonCollectionReusableViewStateAddingStep1);
+    RACSignal *UIStateSignal2 = [[self.editButtonCommand.executionSignals concat] map:^id(id value) {
+      return @(PersonCollectionReusableViewStateAddingStep1);
     }];
+    
+    RACSignal *mergeSignal = [UIStateSignal1 merge:UIStateSignal2];
+    
+    RAC(self, UIState) = mergeSignal;
   }
   
   return self;

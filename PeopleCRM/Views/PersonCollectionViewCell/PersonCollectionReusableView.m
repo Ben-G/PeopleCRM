@@ -55,6 +55,7 @@
   RACSignal *imageBindSignal = [avatarSignalChangeSignal merge:imageViewChangeSignal];
   
   [imageBindSignal subscribeNext:^(id x) {
+    //TODO: use signal operator instead of nested subscription as suggested in http://stackoverflow.com/questions/21205366/reactivecocoa-disposing-of-a-repeating-signal ?
     @strongify(self)
     //TODO: check wether signal or imageview changed
     [self.avatarDisposable dispose];
