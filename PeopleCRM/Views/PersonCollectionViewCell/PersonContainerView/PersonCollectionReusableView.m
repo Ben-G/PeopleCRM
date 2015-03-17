@@ -37,6 +37,10 @@
   [RACObserve(self, presentedView) subscribeNext:^(UIView *newView) {
     [self.innerContentView.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
     [self.innerContentView addSubview:newView];
+    
+    id viewModel = [self.viewModel viewModelforUIState];
+    id newViewID = (id) newView;
+    [newViewID setViewModel:viewModel];
   }];
 }
 

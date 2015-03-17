@@ -23,5 +23,6 @@ typedef NS_ENUM(NSInteger, PersonCollectionReusableViewState) {
 @property (strong) NSNumber *UIState;
 
 - (id)initWithModel:(Person *)person;
+- (id)viewModelforUIState;
 
 @end
