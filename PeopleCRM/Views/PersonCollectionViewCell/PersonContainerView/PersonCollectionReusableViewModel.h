@@ -11,7 +11,6 @@
 
 @class Person;
 
-// TODO: next step: move this into view model
 typedef NS_ENUM(NSInteger, PersonCollectionReusableViewState) {
   PersonCollectionReusableViewStateAddingStep1,
   PersonCollectionReusableViewStateAddingStep2Twitter,
@@ -22,10 +21,6 @@ typedef NS_ENUM(NSInteger, PersonCollectionReusableViewState) {
 @interface PersonCollectionReusableViewModel : NSObject
 
 @property (strong) NSNumber *UIState;
-@property (strong) Person *person;
-@property (strong) RACCommand *editButtonCommand;
-@property (strong) RACCommand *addTwitterButtonCommand;
-@property (strong) RACSignal *avatarSignal;
 
 - (id)initWithModel:(Person *)person;
 

@@ -16,28 +16,10 @@
   self = [super init];
   
   if (self) {
-    self.UIState = @(PersonCollectionReusableViewStateDetails);
+    self.UIState = @(PersonCollectionReusableViewStateAddingStep1);
     
-    RACSignal *enabledSignal = [RACObserve(self, UIState) map:^id(NSNumber *state) {
-      if ([state integerValue] == PersonCollectionReusableViewStateDetails) {
-        return @(YES);
-      } else {
-        return @(NO);
-      }
-    }];
-    
-    self.editButtonCommand = [[RACCommand alloc] initWithEnabled:enabledSignal signalBlock:^RACSignal *(id input) {
-      return [RACSignal return:@(YES)];
-    }];
-    
-    self.addTwitterButtonCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
-      return [TwitterClient avatarForUsername:@""];
-    }];
-    
-    [self.addTwitterButtonCommand.executionSignals subscribeNext:^(id x) {
-      self.avatarSignal = x;
-    }];
-    
+//    RACSignal *imageSignal = [self.addTwitterButtonCommand.executionSignals concat];
+    RAC(self, avatar) = imageSignal;
     
     RACSignal *UIStateSignal1 = [[self.addTwitterButtonCommand.executionSignals concat] map:^id(id value) {
       return @(PersonCollectionReusableViewStateDetails);

@@ -13,5 +13,6 @@
 @property (copy) NSString *name;
 @property (copy) NSString *twitterUsername;
 @property (copy) NSString *notes;
+@property (strong) UIImage *avatar;
 
 @end

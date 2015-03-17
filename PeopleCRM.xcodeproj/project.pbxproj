@@ -10,8 +10,6 @@
 		0552F70201608093658384F4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C12E98B00774ED31D5AB2885 /* libPods.a */; };
 		62339D421AB362B100C89CC9 /* Twitter_API_Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62339D411AB362B100C89CC9 /* Twitter_API_Keys.plist */; };
 		62339D451AB363E600C89CC9 /* TwitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 62339D441AB363E600C89CC9 /* TwitterClient.m */; };
-		625B89211AB12E8300744BA4 /* PersonCollectionViewAdding.xib in Resources */ = {isa = PBXBuildFile; fileRef = 625B89201AB12E8300744BA4 /* PersonCollectionViewAdding.xib */; };
-		625B89241AB14F8E00744BA4 /* PersonCollectionReusableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 625B89231AB14F8E00744BA4 /* PersonCollectionReusableViewModel.m */; };
 		62B707C01AAFD4730031A941 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707BF1AAFD4730031A941 /* main.m */; };
 		62B707C31AAFD4730031A941 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707C21AAFD4730031A941 /* AppDelegate.m */; };
 		62B707C61AAFD4730031A941 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707C51AAFD4730031A941 /* ViewController.m */; };
@@ -20,13 +18,19 @@
 		62B707CE1AAFD4730031A941 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62B707CC1AAFD4730031A941 /* LaunchScreen.xib */; };
 		62B707DA1AAFD4730031A941 /* PeopleCRMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707D91AAFD4730031A941 /* PeopleCRMTests.m */; };
 		62B707E61AAFE9A10031A941 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707E51AAFE9A10031A941 /* Person.m */; };
-		62B707EA1AAFEB500031A941 /* PersonCollectionViewCellDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62B707E91AAFEB500031A941 /* PersonCollectionViewCellDetails.xib */; };
 		62B707EE1AAFED690031A941 /* github_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B707EC1AAFED690031A941 /* github_logo.png */; };
 		62B707EF1AAFED690031A941 /* twitter_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B707ED1AAFED690031A941 /* twitter_logo.png */; };
 		62B707F11AAFEFE20031A941 /* avatar_placeholder.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B707F01AAFEFE20031A941 /* avatar_placeholder.png */; };
 		62B707F51AAFF1860031A941 /* ArrayCollectionViewDataSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707F41AAFF1860031A941 /* ArrayCollectionViewDataSource.m */; };
-		62B707F71AB096D20031A941 /* PersonCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62B707F61AB096D20031A941 /* PersonCollectionReusableView.xib */; };
-		62B707FA1AB0972E0031A941 /* PersonCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707F91AB0972E0031A941 /* PersonCollectionReusableView.m */; };
+		62DF01BA1AB7CD6F00E3B6F0 /* PersonCollectionReusableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DF01B21AB7CD6F00E3B6F0 /* PersonCollectionReusableView.m */; };
+		62DF01BB1AB7CD6F00E3B6F0 /* PersonCollectionReusableView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62DF01B31AB7CD6F00E3B6F0 /* PersonCollectionReusableView.xib */; };
+		62DF01BC1AB7CD6F00E3B6F0 /* PersonCollectionReusableViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DF01B51AB7CD6F00E3B6F0 /* PersonCollectionReusableViewModel.m */; };
+		62DF01BD1AB7CD6F00E3B6F0 /* PersonCollectionViewCellDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62DF01B71AB7CD6F00E3B6F0 /* PersonCollectionViewCellDetails.xib */; };
+		62DF01BE1AB7CD6F00E3B6F0 /* PersonCollectionViewAdding.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62DF01B91AB7CD6F00E3B6F0 /* PersonCollectionViewAdding.xib */; };
+		62DF01C11AB7CDE600E3B6F0 /* PersonCollectionViewCellDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DF01C01AB7CDE600E3B6F0 /* PersonCollectionViewCellDetails.m */; };
+		62DF01C41AB7CE7D00E3B6F0 /* PersonDetailsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DF01C31AB7CE7D00E3B6F0 /* PersonDetailsViewModel.m */; };
+		62DF01C71AB7D16400E3B6F0 /* PersonAddingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DF01C61AB7D16400E3B6F0 /* PersonAddingView.m */; };
+		62DF01CA1AB7D18600E3B6F0 /* PersonAddingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DF01C91AB7D18600E3B6F0 /* PersonAddingViewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,9 +48,6 @@
 		62339D411AB362B100C89CC9 /* Twitter_API_Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Twitter_API_Keys.plist; sourceTree = "<group>"; };
 		62339D431AB363E600C89CC9 /* TwitterClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterClient.h; sourceTree = "<group>"; };
 		62339D441AB363E600C89CC9 /* TwitterClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterClient.m; sourceTree = "<group>"; };
-		625B89201AB12E8300744BA4 /* PersonCollectionViewAdding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCollectionViewAdding.xib; sourceTree = "<group>"; };
-		625B89221AB14F8E00744BA4 /* PersonCollectionReusableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCollectionReusableViewModel.h; sourceTree = "<group>"; };
-		625B89231AB14F8E00744BA4 /* PersonCollectionReusableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCollectionReusableViewModel.m; sourceTree = "<group>"; };
 		62B707BA1AAFD4730031A941 /* PeopleCRM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleCRM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62B707BE1AAFD4730031A941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62B707BF1AAFD4730031A941 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -62,15 +63,26 @@
 		62B707D91AAFD4730031A941 /* PeopleCRMTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PeopleCRMTests.m; sourceTree = "<group>"; };
 		62B707E41AAFE9A10031A941 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 		62B707E51AAFE9A10031A941 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
-		62B707E91AAFEB500031A941 /* PersonCollectionViewCellDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCollectionViewCellDetails.xib; sourceTree = "<group>"; };
 		62B707EC1AAFED690031A941 /* github_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = github_logo.png; sourceTree = "<group>"; };
 		62B707ED1AAFED690031A941 /* twitter_logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = twitter_logo.png; sourceTree = "<group>"; };
 		62B707F01AAFEFE20031A941 /* avatar_placeholder.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = avatar_placeholder.png; sourceTree = "<group>"; };
 		62B707F31AAFF1860031A941 /* ArrayCollectionViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArrayCollectionViewDataSource.h; sourceTree = "<group>"; };
 		62B707F41AAFF1860031A941 /* ArrayCollectionViewDataSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArrayCollectionViewDataSource.m; sourceTree = "<group>"; };
-		62B707F61AB096D20031A941 /* PersonCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCollectionReusableView.xib; sourceTree = "<group>"; };
-		62B707F81AB0972E0031A941 /* PersonCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCollectionReusableView.h; sourceTree = "<group>"; };
-		62B707F91AB0972E0031A941 /* PersonCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCollectionReusableView.m; sourceTree = "<group>"; };
+		62DF01B11AB7CD6F00E3B6F0 /* PersonCollectionReusableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCollectionReusableView.h; sourceTree = "<group>"; };
+		62DF01B21AB7CD6F00E3B6F0 /* PersonCollectionReusableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCollectionReusableView.m; sourceTree = "<group>"; };
+		62DF01B31AB7CD6F00E3B6F0 /* PersonCollectionReusableView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCollectionReusableView.xib; sourceTree = "<group>"; };
+		62DF01B41AB7CD6F00E3B6F0 /* PersonCollectionReusableViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCollectionReusableViewModel.h; sourceTree = "<group>"; };
+		62DF01B51AB7CD6F00E3B6F0 /* PersonCollectionReusableViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCollectionReusableViewModel.m; sourceTree = "<group>"; };
+		62DF01B71AB7CD6F00E3B6F0 /* PersonCollectionViewCellDetails.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCollectionViewCellDetails.xib; sourceTree = "<group>"; };
+		62DF01B91AB7CD6F00E3B6F0 /* PersonCollectionViewAdding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCollectionViewAdding.xib; sourceTree = "<group>"; };
+		62DF01BF1AB7CDE600E3B6F0 /* PersonCollectionViewCellDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCollectionViewCellDetails.h; sourceTree = "<group>"; };
+		62DF01C01AB7CDE600E3B6F0 /* PersonCollectionViewCellDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCollectionViewCellDetails.m; sourceTree = "<group>"; };
+		62DF01C21AB7CE7D00E3B6F0 /* PersonDetailsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDetailsViewModel.h; sourceTree = "<group>"; };
+		62DF01C31AB7CE7D00E3B6F0 /* PersonDetailsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDetailsViewModel.m; sourceTree = "<group>"; };
+		62DF01C51AB7D16400E3B6F0 /* PersonAddingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonAddingView.h; sourceTree = "<group>"; };
+		62DF01C61AB7D16400E3B6F0 /* PersonAddingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonAddingView.m; sourceTree = "<group>"; };
+		62DF01C81AB7D18600E3B6F0 /* PersonAddingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonAddingViewModel.h; sourceTree = "<group>"; };
+		62DF01C91AB7D18600E3B6F0 /* PersonAddingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonAddingViewModel.m; sourceTree = "<group>"; };
 		671CA53971DA7818CC90A69F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		C12E98B00774ED31D5AB2885 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -206,13 +218,9 @@
 		62B707E81AAFEB3A0031A941 /* PersonCollectionViewCell */ = {
 			isa = PBXGroup;
 			children = (
-				62B707E91AAFEB500031A941 /* PersonCollectionViewCellDetails.xib */,
-				62B707F61AB096D20031A941 /* PersonCollectionReusableView.xib */,
-				62B707F81AB0972E0031A941 /* PersonCollectionReusableView.h */,
-				62B707F91AB0972E0031A941 /* PersonCollectionReusableView.m */,
-				625B89201AB12E8300744BA4 /* PersonCollectionViewAdding.xib */,
-				625B89221AB14F8E00744BA4 /* PersonCollectionReusableViewModel.h */,
-				625B89231AB14F8E00744BA4 /* PersonCollectionReusableViewModel.m */,
+				62DF01B01AB7CD6F00E3B6F0 /* PersonContainerView */,
+				62DF01B61AB7CD6F00E3B6F0 /* PersonDetailView */,
+				62DF01B81AB7CD6F00E3B6F0 /* PersonAddingView */,
 			);
 			path = PersonCollectionViewCell;
 			sourceTree = "<group>";
@@ -234,6 +242,42 @@
 				62B707F41AAFF1860031A941 /* ArrayCollectionViewDataSource.m */,
 			);
 			path = Components;
+			sourceTree = "<group>";
+		};
+		62DF01B01AB7CD6F00E3B6F0 /* PersonContainerView */ = {
+			isa = PBXGroup;
+			children = (
+				62DF01B11AB7CD6F00E3B6F0 /* PersonCollectionReusableView.h */,
+				62DF01B21AB7CD6F00E3B6F0 /* PersonCollectionReusableView.m */,
+				62DF01B31AB7CD6F00E3B6F0 /* PersonCollectionReusableView.xib */,
+				62DF01B41AB7CD6F00E3B6F0 /* PersonCollectionReusableViewModel.h */,
+				62DF01B51AB7CD6F00E3B6F0 /* PersonCollectionReusableViewModel.m */,
+			);
+			path = PersonContainerView;
+			sourceTree = "<group>";
+		};
+		62DF01B61AB7CD6F00E3B6F0 /* PersonDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				62DF01B71AB7CD6F00E3B6F0 /* PersonCollectionViewCellDetails.xib */,
+				62DF01BF1AB7CDE600E3B6F0 /* PersonCollectionViewCellDetails.h */,
+				62DF01C01AB7CDE600E3B6F0 /* PersonCollectionViewCellDetails.m */,
+				62DF01C21AB7CE7D00E3B6F0 /* PersonDetailsViewModel.h */,
+				62DF01C31AB7CE7D00E3B6F0 /* PersonDetailsViewModel.m */,
+			);
+			path = PersonDetailView;
+			sourceTree = "<group>";
+		};
+		62DF01B81AB7CD6F00E3B6F0 /* PersonAddingView */ = {
+			isa = PBXGroup;
+			children = (
+				62DF01B91AB7CD6F00E3B6F0 /* PersonCollectionViewAdding.xib */,
+				62DF01C51AB7D16400E3B6F0 /* PersonAddingView.h */,
+				62DF01C61AB7D16400E3B6F0 /* PersonAddingView.m */,
+				62DF01C81AB7D18600E3B6F0 /* PersonAddingViewModel.h */,
+				62DF01C91AB7D18600E3B6F0 /* PersonAddingViewModel.m */,
+			);
+			path = PersonAddingView;
 			sourceTree = "<group>";
 		};
 		DB7529FF25907ABDE2BD1E1A /* Pods */ = {
@@ -329,14 +373,14 @@
 			files = (
 				62B707EF1AAFED690031A941 /* twitter_logo.png in Resources */,
 				62B707EE1AAFED690031A941 /* github_logo.png in Resources */,
+				62DF01BE1AB7CD6F00E3B6F0 /* PersonCollectionViewAdding.xib in Resources */,
 				62B707C91AAFD4730031A941 /* Main.storyboard in Resources */,
-				62B707F71AB096D20031A941 /* PersonCollectionReusableView.xib in Resources */,
 				62B707CE1AAFD4730031A941 /* LaunchScreen.xib in Resources */,
+				62DF01BB1AB7CD6F00E3B6F0 /* PersonCollectionReusableView.xib in Resources */,
 				62B707CB1AAFD4730031A941 /* Images.xcassets in Resources */,
 				62B707F11AAFEFE20031A941 /* avatar_placeholder.png in Resources */,
 				62339D421AB362B100C89CC9 /* Twitter_API_Keys.plist in Resources */,
-				62B707EA1AAFEB500031A941 /* PersonCollectionViewCellDetails.xib in Resources */,
-				625B89211AB12E8300744BA4 /* PersonCollectionViewAdding.xib in Resources */,
+				62DF01BD1AB7CD6F00E3B6F0 /* PersonCollectionViewCellDetails.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -387,13 +431,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				625B89241AB14F8E00744BA4 /* PersonCollectionReusableViewModel.m in Sources */,
+				62DF01CA1AB7D18600E3B6F0 /* PersonAddingViewModel.m in Sources */,
+				62DF01C41AB7CE7D00E3B6F0 /* PersonDetailsViewModel.m in Sources */,
+				62DF01BC1AB7CD6F00E3B6F0 /* PersonCollectionReusableViewModel.m in Sources */,
 				62B707C61AAFD4730031A941 /* ViewController.m in Sources */,
 				62B707C31AAFD4730031A941 /* AppDelegate.m in Sources */,
-				62B707FA1AB0972E0031A941 /* PersonCollectionReusableView.m in Sources */,
+				62DF01C71AB7D16400E3B6F0 /* PersonAddingView.m in Sources */,
 				62339D451AB363E600C89CC9 /* TwitterClient.m in Sources */,
+				62DF01C11AB7CDE600E3B6F0 /* PersonCollectionViewCellDetails.m in Sources */,
 				62B707E61AAFE9A10031A941 /* Person.m in Sources */,
 				62B707F51AAFF1860031A941 /* ArrayCollectionViewDataSource.m in Sources */,
+				62DF01BA1AB7CD6F00E3B6F0 /* PersonCollectionReusableView.m in Sources */,
 				62B707C01AAFD4730031A941 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
