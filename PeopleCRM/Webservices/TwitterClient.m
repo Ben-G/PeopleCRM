@@ -22,7 +22,13 @@
     return [self client:client fetchUserInfo:username];
   }]
     deliverOn:bgScheduler] flattenMap:^RACStream *(NSDictionary *userInfo) {
-    return [self imageFromURLString:userInfo[@"profile_image_url_https"]];
+    
+    NSDictionary *userDetails = @{@"name": userInfo[@"name"],
+                                  @"description": userInfo[@"description"]};
+    
+    NSString *downloadURL = [userInfo[@"profile_image_url_https"] stringByReplacingOccurrencesOfString:@"normal" withString:@"bigger"];
+    
+    return [[self imageFromURLString:downloadURL] combineLatestWith:[RACSignal return:userDetails]];
   }];
 }
 

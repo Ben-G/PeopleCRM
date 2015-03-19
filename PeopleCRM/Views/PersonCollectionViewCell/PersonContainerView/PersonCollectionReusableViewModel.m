@@ -47,7 +47,18 @@
     RACSignal *mergeSignal = [UIStateSignal1 merge:UIStateSignal2];
     
     RAC(self, UIState) = mergeSignal;
-    RAC(self.person, avatar) = twitterFetchSignal;
+    
+    RAC(self.person, avatar) = [twitterFetchSignal reduceEach:^id(UIImage *avatar, NSDictionary *userInfo){
+      return avatar;
+    }];
+    
+    RAC(self.person, name) = [twitterFetchSignal reduceEach:^id(UIImage *avatar, NSDictionary *userInfo){
+      return userInfo[@"name"];
+    }];
+    
+    RAC(self.person, notes) = [twitterFetchSignal reduceEach:^id(UIImage *avatar, NSDictionary *userInfo){
+      return userInfo[@"description"];
+    }];
   }
   
   return self;

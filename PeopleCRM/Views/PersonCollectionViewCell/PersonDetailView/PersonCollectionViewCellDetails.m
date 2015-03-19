@@ -14,6 +14,8 @@
 
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
+@property (weak, nonatomic) IBOutlet UILabel *nameLabel;
+@property (weak, nonatomic) IBOutlet UILabel *notesLabel;
 
 @end
 
@@ -21,6 +23,8 @@
 
 - (void)awakeFromNib {
   RAC(self, avatarImageView.image) = RACObserve(self, viewModel.avatar);
+  RAC(self, nameLabel.text) = RACObserve(self, viewModel.name);
+  RAC(self, notesLabel.text) = RACObserve(self, viewModel.notes);
   
   [RACObserve(self, viewModel) subscribeNext:^(id x) {
     self.editButton.rac_command = self.viewModel.editButtonCommand;

@@ -8,6 +8,12 @@
 
 #import "PersonDetailsViewModel.h"
 
+@interface PersonDetailsViewModel()
+
+@property (strong) Person *person;
+
+@end
+
 @implementation PersonDetailsViewModel
 
 - (id)initWithModel:(Person *)person {
@@ -18,7 +24,11 @@
       return [RACSignal return:@(YES)];
     }];
 
-    self.avatar = person.avatar;
+    self.person = person;
+    
+    RAC(self, avatar) = RACObserve(self.person, avatar);
+    RAC(self, name) = RACObserve(self.person, name);
+    RAC(self, notes) = RACObserve(self.person, notes);
   }
   
   return self;

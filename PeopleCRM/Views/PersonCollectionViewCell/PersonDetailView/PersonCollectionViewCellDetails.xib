@@ -11,7 +11,7 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Benjamin Encz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumScaleFactor="0.80000000000000027" translatesAutoresizingMaskIntoConstraints="NO" id="J08-ff-25u">
-                    <rect key="frame" x="111" y="8" width="181" height="21"/>
+                    <rect key="frame" x="72" y="8" width="220" height="21"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="21" id="DVv-We-evN"/>
                     </constraints>
@@ -20,14 +20,14 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_placeholder.png" translatesAutoresizingMaskIntoConstraints="NO" id="hyP-9F-KbR">
-                    <rect key="frame" x="8" y="8" width="95" height="95"/>
+                    <rect key="frame" x="8" y="8" width="48" height="48"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="95" id="fsj-3Y-qUL"/>
-                        <constraint firstAttribute="width" constant="95" id="uUt-dY-hJ2"/>
+                        <constraint firstAttribute="height" constant="48" id="fsj-3Y-qUL"/>
+                        <constraint firstAttribute="width" constant="48" id="uUt-dY-hJ2"/>
                     </constraints>
                 </imageView>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Met him at NSMeetup. Cool person! Should chat again soon! " lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lex-J5-oue">
-                    <rect key="frame" x="111" y="37" width="181" height="61"/>
+                    <rect key="frame" x="72" y="37" width="220" height="61"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -79,7 +79,7 @@
                 <constraint firstItem="jfy-js-b9u" firstAttribute="top" secondItem="hyP-9F-KbR" secondAttribute="bottom" constant="18" id="Wls-37-vwX"/>
                 <constraint firstAttribute="trailing" secondItem="Lex-J5-oue" secondAttribute="trailing" constant="8" id="Xkv-oq-VMi"/>
                 <constraint firstItem="OpY-aR-ckt" firstAttribute="top" secondItem="hyP-9F-KbR" secondAttribute="bottom" constant="20" id="aNj-lg-Sbi"/>
-                <constraint firstItem="J08-ff-25u" firstAttribute="leading" secondItem="hyP-9F-KbR" secondAttribute="trailing" constant="8" id="f2j-tR-kLH"/>
+                <constraint firstItem="J08-ff-25u" firstAttribute="leading" secondItem="hyP-9F-KbR" secondAttribute="trailing" constant="16" id="f2j-tR-kLH"/>
                 <constraint firstAttribute="trailing" secondItem="gWV-JO-iZN" secondAttribute="trailing" constant="8" id="hdr-vP-zhb"/>
                 <constraint firstItem="gWV-JO-iZN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aW3-Ep-N1j" secondAttribute="trailing" constant="28" id="ifA-bd-xea"/>
                 <constraint firstItem="jfy-js-b9u" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="iq2-TZ-TbP"/>
@@ -88,7 +88,7 @@
                 <constraint firstItem="Lex-J5-oue" firstAttribute="top" secondItem="J08-ff-25u" secondAttribute="bottom" constant="8" id="jpG-s3-4A2"/>
                 <constraint firstItem="0iq-Hh-fLF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="nH8-mp-Iju"/>
                 <constraint firstItem="hyP-9F-KbR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="oeR-9B-qBT"/>
-                <constraint firstItem="Lex-J5-oue" firstAttribute="leading" secondItem="hyP-9F-KbR" secondAttribute="trailing" constant="8" id="pO2-BQ-j9J"/>
+                <constraint firstItem="Lex-J5-oue" firstAttribute="leading" secondItem="hyP-9F-KbR" secondAttribute="trailing" constant="16" id="pO2-BQ-j9J"/>
                 <constraint firstAttribute="bottom" secondItem="0iq-Hh-fLF" secondAttribute="bottom" constant="10" id="uqn-Ks-hwr"/>
                 <constraint firstItem="aW3-Ep-N1j" firstAttribute="centerY" secondItem="0iq-Hh-fLF" secondAttribute="centerY" id="yYu-Sh-Wea"/>
                 <constraint firstItem="aW3-Ep-N1j" firstAttribute="leading" secondItem="0iq-Hh-fLF" secondAttribute="trailing" constant="15" id="z0h-dy-imq"/>
@@ -104,6 +104,8 @@
             <connections>
                 <outlet property="avatarImageView" destination="hyP-9F-KbR" id="YWh-G2-eZ1"/>
                 <outlet property="editButton" destination="gWV-JO-iZN" id="G2A-J3-3Ws"/>
+                <outlet property="nameLabel" destination="J08-ff-25u" id="nbq-ey-OHr"/>
+                <outlet property="notesLabel" destination="Lex-J5-oue" id="VA9-44-XXg"/>
             </connections>
             <point key="canvasLocation" x="258" y="162"/>
         </view>

@@ -36,7 +36,7 @@
       } else {
         return @(YES);
       }
-    }] replay];
+    }] replayLast];
   }
   
   return self;
