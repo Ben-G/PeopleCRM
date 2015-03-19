@@ -32,6 +32,7 @@
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="addTwitterButton" destination="aAp-vF-PS6" id="q6D-Ro-67D"/>
+                <outlet property="usernameTextfield" destination="uWV-fE-JAh" id="FTl-RV-R6n"/>
             </connections>
             <point key="canvasLocation" x="381" y="377"/>
         </view>

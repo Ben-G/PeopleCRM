@@ -13,6 +13,7 @@
 @interface PersonAddingView()
 
 @property (weak, nonatomic) IBOutlet UIButton *addTwitterButton;
+@property (weak, nonatomic) IBOutlet UITextField *usernameTextfield;
 
 @end
 
@@ -20,6 +21,7 @@
 
 - (void)awakeFromNib {
   [RACObserve(self, viewModel) subscribeNext:^(id x) {
+    RAC(self.viewModel, usernameSearchText) = self.usernameTextfield.rac_textSignal;
     self.addTwitterButton.rac_command = self.viewModel.addTwitterButtonCommand;
   }];
 }

@@ -25,7 +25,7 @@
       case PersonCollectionReusableViewStateDetails:
         return [[[NSBundle mainBundle] loadNibNamed:@"PersonCollectionViewCellDetails" owner:self options:nil] objectAtIndex:0];
         break;
-      case PersonCollectionReusableViewStateAddingStep1:
+      case PersonCollectionReusableViewStateAddingTwitter:
         return [[[NSBundle mainBundle] loadNibNamed:@"PersonCollectionViewAdding" owner:self options:nil] objectAtIndex:0];
         break;
       default:

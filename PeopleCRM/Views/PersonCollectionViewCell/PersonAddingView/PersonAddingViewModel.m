@@ -15,7 +15,15 @@
   self = [super init];
   
   if (self) {
-    self.addTwitterButtonCommand = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) {
+    RACSignal *searchTextSignal = [RACObserve(self, usernameSearchText) map:^id(NSString *searchText) {
+      if (!searchText || [searchText  isEqualToString:@""]) {
+        return @(NO);
+      } else {
+        return @(YES);
+      }
+    }];
+    
+    self.addTwitterButtonCommand = [[RACCommand alloc] initWithEnabled:searchTextSignal signalBlock:^RACSignal *(id input) {
       return [TwitterClient avatarForUsername:@""];
     }];
   }

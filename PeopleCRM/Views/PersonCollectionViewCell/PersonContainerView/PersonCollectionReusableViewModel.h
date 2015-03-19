@@ -12,9 +12,7 @@
 @class Person;
 
 typedef NS_ENUM(NSInteger, PersonCollectionReusableViewState) {
-  PersonCollectionReusableViewStateAddingStep1,
-  PersonCollectionReusableViewStateAddingStep2Twitter,
-  PersonCollectionReusableViewStateAddingStep2Github,
+  PersonCollectionReusableViewStateAddingTwitter,
   PersonCollectionReusableViewStateDetails
 };
 

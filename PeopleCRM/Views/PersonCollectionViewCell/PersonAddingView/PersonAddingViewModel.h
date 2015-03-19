@@ -12,5 +12,6 @@
 @interface PersonAddingViewModel : NSObject
 
 @property (strong) RACCommand *addTwitterButtonCommand;
+@property (copy) NSString *usernameSearchText;
 
 @end

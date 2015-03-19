@@ -28,7 +28,7 @@
   
   if (self) {
     self.person = person;
-    self.UIState = @(PersonCollectionReusableViewStateAddingStep1);
+    self.UIState = @(PersonCollectionReusableViewStateAddingTwitter);
     
     RACSignal *twitterFetchSignal = [RACObserve(self, personAddingViewModel) flattenMap:^RACStream *(id value) {
       return [self.personAddingViewModel.addTwitterButtonCommand.executionSignals concat];
@@ -37,7 +37,7 @@
     RACSignal *UIStateSignal1 = [[RACObserve(self, personDetailsViewModel) flattenMap:^RACStream *(id value) {
       return [self.personDetailsViewModel.editButtonCommand.executionSignals concat];
     }] map:^id(id value) {
-      return @(PersonCollectionReusableViewStateAddingStep1);
+      return @(PersonCollectionReusableViewStateAddingTwitter);
     }];
     
     RACSignal *UIStateSignal2 = [twitterFetchSignal map:^id(id value) {
@@ -59,7 +59,7 @@
     case PersonCollectionReusableViewStateDetails:
       return self.personDetailsViewModel = [[PersonDetailsViewModel alloc] initWithModel:self.person];
       break;
-    case PersonCollectionReusableViewStateAddingStep1:
+    case PersonCollectionReusableViewStateAddingTwitter:
       return self.personAddingViewModel = [[PersonAddingViewModel alloc] init];
       break;
     default:
