@@ -57,16 +57,34 @@
 - (id)viewModelforUIState {
   switch ([self.UIState integerValue]) {
     case PersonCollectionReusableViewStateDetails:
-      return self.personDetailsViewModel = [[PersonDetailsViewModel alloc] initWithModel:self.person];
+      return self.personDetailsViewModel;
       break;
     case PersonCollectionReusableViewStateAddingTwitter:
-      return self.personAddingViewModel = [[PersonAddingViewModel alloc] init];
+      return self.personAddingViewModel;
       break;
     default:
       assert(false);
       return nil;
       break;
   }
+}
+
+#pragma mark - Property Getter/Setter overrides
+
+- (PersonDetailsViewModel *)personDetailsViewModel {
+  if (!_personDetailsViewModel) {
+    _personDetailsViewModel = [[PersonDetailsViewModel alloc] initWithModel:self.person];
+  }
+  
+  return _personDetailsViewModel;
+}
+
+- (PersonAddingViewModel *)personAddingViewModel {
+  if (!_personAddingViewModel) {
+    _personAddingViewModel = [[PersonAddingViewModel alloc] init];
+  }
+  
+  return _personAddingViewModel;
 }
 
 @end

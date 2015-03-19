@@ -13,6 +13,6 @@
 
 @property (strong) RACCommand *addTwitterButtonCommand;
 @property (strong) RACSignal *errorViewHiddenSignal;
-@property (copy) NSString *usernameSearchText;
+@property (strong) NSString *usernameSearchText;
 
 @end

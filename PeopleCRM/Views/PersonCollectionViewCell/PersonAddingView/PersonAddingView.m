@@ -22,9 +22,15 @@
 
 - (void)awakeFromNib {
   [RACObserve(self, viewModel) subscribeNext:^(id x) {
-    RAC(self.viewModel, usernameSearchText) = self.usernameTextfield.rac_textSignal;
     self.addTwitterButton.rac_command = self.viewModel.addTwitterButtonCommand;
     RAC(self.errorView, hidden) = self.viewModel.errorViewHiddenSignal;
+    
+    // two-way bind textfield and usernameSearchText
+    RACChannelTerminal *modelTerminal = RACChannelTo(self.viewModel, usernameSearchText);
+    RACChannelTerminal *textFieldTerminal = [self.usernameTextfield rac_newTextChannel];
+    
+    [textFieldTerminal subscribe:modelTerminal];
+    [modelTerminal subscribe:textFieldTerminal];
   }];
 }
 
