@@ -29,7 +29,7 @@
 + (RACSignal *)client:(STTwitterAPI *)client fetchUserInfo:(NSString *)username {
   return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
 
-    [client getUserInformationFor:@"benjaminencz" successBlock:^(NSDictionary *user) {
+    [client getUserInformationFor:username successBlock:^(NSDictionary *user) {
       [subscriber sendNext:user];
       [subscriber sendCompleted];
     } errorBlock:^(NSError *error) {

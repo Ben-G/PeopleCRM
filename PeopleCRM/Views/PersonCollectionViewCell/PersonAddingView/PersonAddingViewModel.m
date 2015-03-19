@@ -24,7 +24,22 @@
     }];
     
     self.addTwitterButtonCommand = [[RACCommand alloc] initWithEnabled:searchTextSignal signalBlock:^RACSignal *(id input) {
-      return [TwitterClient avatarForUsername:@""];
+      RACSignal *signal = [TwitterClient avatarForUsername:self.usernameSearchText];
+      
+      return signal;
+    }];
+    
+    self.errorViewHiddenSignal = [[self.addTwitterButtonCommand.executionSignals concat] catch:^RACSignal *(NSError *error) {
+      return [RACSignal return:@(NO)];
+    }];
+    
+    // subscribing to RACCommandErrors is special case
+    self.errorViewHiddenSignal = [[[[self.addTwitterButtonCommand.executionSignals concat] merge: self.addTwitterButtonCommand.errors] startWith:@(YES)] map:^id(id value) {
+      if ([value isKindOfClass:[NSError class]]) {
+        return @(NO);
+      } else {
+        return @(YES);
+      }
     }];
   }
   

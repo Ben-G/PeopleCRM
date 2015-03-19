@@ -14,6 +14,7 @@
 
 @property (weak, nonatomic) IBOutlet UIButton *addTwitterButton;
 @property (weak, nonatomic) IBOutlet UITextField *usernameTextfield;
+@property (weak, nonatomic) IBOutlet UIView *errorView;
 
 @end
 
@@ -23,6 +24,7 @@
   [RACObserve(self, viewModel) subscribeNext:^(id x) {
     RAC(self.viewModel, usernameSearchText) = self.usernameTextfield.rac_textSignal;
     self.addTwitterButton.rac_command = self.viewModel.addTwitterButtonCommand;
+    RAC(self.errorView, hidden) = self.viewModel.errorViewHiddenSignal;
   }];
 }
 

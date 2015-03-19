@@ -12,6 +12,7 @@
 @interface PersonAddingViewModel : NSObject
 
 @property (strong) RACCommand *addTwitterButtonCommand;
+@property (strong) RACSignal *errorViewHiddenSignal;
 @property (copy) NSString *usernameSearchText;
 
 @end

@@ -27,11 +27,24 @@
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
+                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfa-MS-xMn">
+                    <rect key="frame" x="0.0" y="42" width="300" height="35"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Found no one with this username :(" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZj-eD-G3r">
+                            <rect key="frame" x="15" y="7" width="270" height="21"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.93517203282828287" green="0.2095839867036122" blue="0.13138372446086166" alpha="1" colorSpace="calibratedRGB"/>
+                </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
                 <outlet property="addTwitterButton" destination="aAp-vF-PS6" id="q6D-Ro-67D"/>
+                <outlet property="errorView" destination="xfa-MS-xMn" id="uVd-bD-yWV"/>
                 <outlet property="usernameTextfield" destination="uWV-fE-JAh" id="FTl-RV-R6n"/>
             </connections>
             <point key="canvasLocation" x="381" y="377"/>
