@@ -63,26 +63,16 @@ describe(@"PersonDetailViewModel_errorMessage", ^{
   it(@"shows an error message when twitter operation fails", ^{
     id twitterClient = [TwitterClient new];
     id twitterMock = OCMPartialMock(twitterClient);
-    
-    RACSignal *signal = [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-      [subscriber sendError:[NSError new]];
-      
-      return nil;
-    }] deliverOn:[RACScheduler scheduler]];
-    
+    RACSignal *signal = [RACSignal error:[NSError new]];
     OCMStub([twitterMock avatarForUsername:[OCMArg any]]).andReturn(signal);
     
     viewModel = [[PersonAddingViewModel alloc] initWithTwitterClient:twitterClient];
-    
-    [viewModel.addTwitterButtonCommand.executionSignals subscribeNext:^(id x) {
-      
-    }];
-    
-    viewModel.usernameSearchText = @"usernameasdasdsadasdsadsadasdasdasdasd";
+    // enable command
+    viewModel.usernameSearchText = @"validcontent";
     
     __block id result;
     
-    [[viewModel.errorViewHiddenSignal skip:1] subscribeNext:^(id x) {
+    [viewModel.errorViewHiddenSignal subscribeNext:^(id x) {
       result = x;
     }];
     

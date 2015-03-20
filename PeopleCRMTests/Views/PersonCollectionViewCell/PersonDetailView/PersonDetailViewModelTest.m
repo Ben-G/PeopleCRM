@@ -27,20 +27,6 @@ beforeEach(^{
   viewModel = [[PersonDetailViewModel alloc] initWithModel:person];
 });
 
-describe(@"PersonDetailViewModel", ^{
-  
-//  it(@"disable login command when username is empty", ^{
-//    viewModel.username = @"";
-//    viewModel.password = @"password";
-//    __block id result;
-//    [[viewModel validateLoginInputs] subscribeNext:^(id x) {
-//      result = x;
-//    }];
-//    expect(result).to.equal(@0);
-//  });
-  
-});
-
 afterEach(^{
   person = nil;
   viewModel = nil;
