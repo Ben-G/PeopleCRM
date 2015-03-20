@@ -14,15 +14,15 @@
 		62339D451AB363E600C89CC9 /* TwitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 62339D441AB363E600C89CC9 /* TwitterClient.m */; };
 		626DDA2B1ABBBFDD005371FC /* Pods-PeopleCRM.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 626DDA291ABBBFDD005371FC /* Pods-PeopleCRM.debug.xcconfig */; };
 		626DDA2C1ABBBFDD005371FC /* Pods-PeopleCRM.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 626DDA2A1ABBBFDD005371FC /* Pods-PeopleCRM.release.xcconfig */; };
-		626DDA311ABBC0C7005371FC /* PersonDetailViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 626DDA301ABBC0C7005371FC /* PersonDetailViewModelTest.m */; };
-		626DDA361ABBC2D7005371FC /* PersonAddingViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 626DDA351ABBC2D7005371FC /* PersonAddingViewModelTest.m */; };
+		626DDA3B1ABBD658005371FC /* PersonAddingViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 626DDA351ABBC2D7005371FC /* PersonAddingViewModelTest.m */; };
+		626DDA3C1ABBD65C005371FC /* PersonDetailViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 626DDA301ABBC0C7005371FC /* PersonDetailViewModelTest.m */; };
+		626DDA3D1ABBD65F005371FC /* PeopleCRMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707D91AAFD4730031A941 /* PeopleCRMTests.m */; };
 		62B707C01AAFD4730031A941 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707BF1AAFD4730031A941 /* main.m */; };
 		62B707C31AAFD4730031A941 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707C21AAFD4730031A941 /* AppDelegate.m */; };
 		62B707C61AAFD4730031A941 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707C51AAFD4730031A941 /* ViewController.m */; };
 		62B707C91AAFD4730031A941 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 62B707C71AAFD4730031A941 /* Main.storyboard */; };
 		62B707CB1AAFD4730031A941 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 62B707CA1AAFD4730031A941 /* Images.xcassets */; };
 		62B707CE1AAFD4730031A941 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62B707CC1AAFD4730031A941 /* LaunchScreen.xib */; };
-		62B707DA1AAFD4730031A941 /* PeopleCRMTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707D91AAFD4730031A941 /* PeopleCRMTests.m */; };
 		62B707E61AAFE9A10031A941 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707E51AAFE9A10031A941 /* Person.m */; };
 		62B707EE1AAFED690031A941 /* github_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B707EC1AAFED690031A941 /* github_logo.png */; };
 		62B707EF1AAFED690031A941 /* twitter_logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 62B707ED1AAFED690031A941 /* twitter_logo.png */; };
@@ -536,9 +536,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				626DDA311ABBC0C7005371FC /* PersonDetailViewModelTest.m in Sources */,
-				62B707DA1AAFD4730031A941 /* PeopleCRMTests.m in Sources */,
-				626DDA361ABBC2D7005371FC /* PersonAddingViewModelTest.m in Sources */,
+				626DDA3C1ABBD65C005371FC /* PersonDetailViewModelTest.m in Sources */,
+				626DDA3B1ABBD658005371FC /* PersonAddingViewModelTest.m in Sources */,
+				626DDA3D1ABBD65F005371FC /* PeopleCRMTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +658,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PeopleCRM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -669,6 +670,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PeopleCRM/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -688,6 +690,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = PeopleCRMTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeopleCRM.app/PeopleCRM";
@@ -704,6 +707,7 @@
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = PeopleCRMTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PeopleCRM.app/PeopleCRM";

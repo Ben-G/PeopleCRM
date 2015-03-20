@@ -32,7 +32,7 @@ describe(@"PersonDetailViewModel_addButton", ^{
     [viewModel.addButtonEnabledSignal subscribeNext:^(id x) {
       result = x;
     }];
-    expect(result).to.equal(@0);
+    expect(result).to.equal(@(NO));
   });
   
   it(@"enables add command when username search text is not empty", ^{
@@ -41,7 +41,7 @@ describe(@"PersonDetailViewModel_addButton", ^{
     [viewModel.addButtonEnabledSignal subscribeNext:^(id x) {
       result = x;
     }];
-    expect(result).to.equal(@1);
+    expect(result).to.equal(@(YES));
   });
   
   it(@"calls the Twitter API when add button is tapped", ^{
@@ -55,7 +55,41 @@ describe(@"PersonDetailViewModel_addButton", ^{
     
     OCMVerify([twitterMock avatarForUsername:@"username"]);
   });
+  
+});
 
+describe(@"PersonDetailViewModel_errorMessage", ^{
+  
+  it(@"shows an error message when twitter operation fails", ^{
+    id twitterClient = [TwitterClient new];
+    id twitterMock = OCMPartialMock(twitterClient);
+    
+    RACSignal *signal = [[RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
+      [subscriber sendError:[NSError new]];
+      
+      return nil;
+    }] deliverOn:[RACScheduler scheduler]];
+    
+    OCMStub([twitterMock avatarForUsername:[OCMArg any]]).andReturn(signal);
+    
+    viewModel = [[PersonAddingViewModel alloc] initWithTwitterClient:twitterClient];
+    
+    [viewModel.addTwitterButtonCommand.executionSignals subscribeNext:^(id x) {
+      
+    }];
+    
+    viewModel.usernameSearchText = @"usernameasdasdsadasdsadsadasdasdasdasd";
+    
+    __block id result;
+    
+    [[viewModel.errorViewHiddenSignal skip:1] subscribeNext:^(id x) {
+      result = x;
+    }];
+    
+    [[viewModel.addTwitterButtonCommand execute:nil] asynchronouslyWaitUntilCompleted:nil];
+    
+    expect(result).to.equal(@(NO)); // expect error view to be visible
+  });
   
 });
 
