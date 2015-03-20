@@ -8,7 +8,7 @@
 
 #import "PersonCollectionViewCellDetails.h"
 #import "ReactiveCocoa.h"
-#import "PersonDetailsViewModel.h"
+#import "PersonDetailViewModel.h"
 
 @interface PersonCollectionViewCellDetails()
 

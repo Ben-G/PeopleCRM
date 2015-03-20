@@ -7,15 +7,26 @@
 //
 
 #import "PersonAddingViewModel.h"
-#import "TwitterClient.h"
+
+@interface PersonAddingViewModel()
+
+@property (strong) TwitterClient *twitterClient;
+
+@end
 
 @implementation PersonAddingViewModel
 
 - (id)init {
+  return [self initWithTwitterClient:[TwitterClient new]];
+}
+
+- (id)initWithTwitterClient:(TwitterClient *)twitterClient {
   self = [super init];
   
   if (self) {
-    RACSignal *searchTextSignal = [RACObserve(self, usernameSearchText) map:^id(NSString *searchText) {
+    self.twitterClient = twitterClient;
+    
+    self.addButtonEnabledSignal = [RACObserve(self, usernameSearchText) map:^id(NSString *searchText) {
       if (!searchText || [searchText  isEqualToString:@""]) {
         return @(NO);
       } else {
@@ -23,8 +34,8 @@
       }
     }];
     
-    self.addTwitterButtonCommand = [[RACCommand alloc] initWithEnabled:searchTextSignal signalBlock:^RACSignal *(id input) {
-      RACSignal *signal = [TwitterClient avatarForUsername:self.usernameSearchText];
+    self.addTwitterButtonCommand = [[RACCommand alloc] initWithEnabled:self.addButtonEnabledSignal signalBlock:^RACSignal *(id input) {
+      RACSignal *signal = [self.twitterClient avatarForUsername:self.usernameSearchText];
       
       return signal;
     }];

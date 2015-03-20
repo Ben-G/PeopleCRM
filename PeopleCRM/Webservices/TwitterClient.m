@@ -13,10 +13,10 @@
 
 @implementation TwitterClient
 
-+ (RACSignal *)avatarForUsername:(NSString *)username {
+- (RACSignal *)avatarForUsername:(NSString *)username {
   RACScheduler *bgScheduler = [RACScheduler scheduler];
   
-  return [[[[[TwitterClient _login]
+  return [[[[[self _login]
     deliverOn:bgScheduler]
     flattenMap:^RACStream *(STTwitterAPI *client) {
     return [self client:client fetchUserInfo:username];
@@ -32,7 +32,7 @@
   }];
 }
 
-+ (RACSignal *)client:(STTwitterAPI *)client fetchUserInfo:(NSString *)username {
+- (RACSignal *)client:(STTwitterAPI *)client fetchUserInfo:(NSString *)username {
   return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
 
     [client getUserInformationFor:username successBlock:^(NSDictionary *user) {
@@ -49,7 +49,7 @@
 ;
 
 //TODO: move image download out
-+ (RACSignal *)imageFromURLString:(NSString *)urlString {
+- (RACSignal *)imageFromURLString:(NSString *)urlString {
   AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]
                                             initWithBaseURL:nil];
   manager.responseSerializer = [AFImageResponseSerializer serializer];
@@ -62,7 +62,7 @@
 static NSDictionary *_twitterCredentials;
 static STTwitterAPI *_twitterClient;
 
-+ (RACSignal *)_login {
+- (RACSignal *)_login {
   return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
 
     if (!_twitterCredentials) {

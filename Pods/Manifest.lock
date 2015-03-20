@@ -23,6 +23,8 @@ PODS:
   - AFNetworking/UIKit (2.5.1):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Expecta (0.3.2)
+  - OCMock (3.1.2)
   - ReactiveCocoa (2.4.7):
     - ReactiveCocoa/UI (= 2.4.7)
   - ReactiveCocoa/Core (2.4.7):
@@ -30,17 +32,24 @@ PODS:
   - ReactiveCocoa/no-arc (2.4.7)
   - ReactiveCocoa/UI (2.4.7):
     - ReactiveCocoa/Core
+  - Specta (0.4.0)
   - STTwitter (0.1.9)
 
 DEPENDENCIES:
   - AFNetworking-RACExtensions
+  - Expecta
+  - OCMock
   - ReactiveCocoa
+  - Specta
   - STTwitter
 
 SPEC CHECKSUMS:
   AFNetworking: 8bee59492a6ff15d69130efa4d0dc67e0094a52a
   AFNetworking-RACExtensions: dd55d08dbfa013b9e118d5c1a5e4b58b63e734e1
+  Expecta: ee641011fe10aa1855d487b40e4976dac50ec342
+  OCMock: ecdd510b73ef397f2f97274785c1e87fd147c49f
   ReactiveCocoa: 313fc53cc9aeb2bbbc3f5f13c7eac16478d9af8f
+  Specta: 1df326d6ec48603c77f507a0ab1f89ad2df1c582
   STTwitter: c9ddaac928660d64e346546d554069a7cdaaf5aa
 
 COCOAPODS: 0.35.0

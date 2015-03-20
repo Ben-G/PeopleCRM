@@ -10,13 +10,13 @@
 #import "Person.h"
 #import "TwitterClient.h"
 
-#import "PersonDetailsViewModel.h"
+#import "PersonDetailViewModel.h"
 #import "PersonAddingViewModel.h"
 
 @interface PersonCollectionReusableViewModel()
 
 @property (strong, nonatomic) Person *person;
-@property (strong, nonatomic) PersonDetailsViewModel *personDetailsViewModel;
+@property (strong, nonatomic) PersonDetailViewModel *personDetailsViewModel;
 @property (strong, nonatomic) PersonAddingViewModel *personAddingViewModel;
 
 @end
@@ -82,9 +82,9 @@
 
 #pragma mark - Property Getter/Setter overrides
 
-- (PersonDetailsViewModel *)personDetailsViewModel {
+- (PersonDetailViewModel *)personDetailsViewModel {
   if (!_personDetailsViewModel) {
-    _personDetailsViewModel = [[PersonDetailsViewModel alloc] initWithModel:self.person];
+    _personDetailsViewModel = [[PersonDetailViewModel alloc] initWithModel:self.person];
   }
   
   return _personDetailsViewModel;

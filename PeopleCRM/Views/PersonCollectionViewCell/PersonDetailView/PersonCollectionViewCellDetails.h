@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class PersonDetailsViewModel;
+@class PersonDetailViewModel;
 
 @interface PersonCollectionViewCellDetails : UIView
 
-@property (strong, nonatomic) PersonDetailsViewModel *viewModel;
+@property (strong, nonatomic) PersonDetailViewModel *viewModel;
 
 @end

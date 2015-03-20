@@ -4,27 +4,47 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>Pods-AFNetworking-RACExtensions.xcscheme</key>
+		<key>Pods-PeopleCRM-AFNetworking-RACExtensions.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-AFNetworking.xcscheme</key>
+		<key>Pods-PeopleCRM-AFNetworking.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-ReactiveCocoa.xcscheme</key>
+		<key>Pods-PeopleCRM-ReactiveCocoa.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods-STTwitter.xcscheme</key>
+		<key>Pods-PeopleCRM-STTwitter.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
 		</dict>
-		<key>Pods.xcscheme</key>
+		<key>Pods-PeopleCRM.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-PeopleCRMTests-Expecta.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-PeopleCRMTests-OCMock.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-PeopleCRMTests-Specta.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
+		<key>Pods-PeopleCRMTests.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -32,27 +52,47 @@
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0775C4192E8E31D249AE68D0</key>
+		<key>172A5525CC674D4E7C376F4C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>2EE5D8852FBC7CDCC7F7C84E</key>
+		<key>1EA08F15D8B48A82100EE704</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>50679FE0F8EE3AE4840A4953</key>
+		<key>2409BCC64EE2CDDBA61666B8</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>BE890DDA1E5CACE1F9D854A2</key>
+		<key>33502CA0B54860C153269FE1</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D1D67B844C12A1B391A8AFB3</key>
+		<key>33A6091731238120DB0261DA</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>9DA7C0AB704505600E5EAC3C</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A4280D807303FBC8E78C0F82</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>CC1C8F678073267DD0114A1D</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D3A85C0A65D7144F2A9B3B9E</key>
 		<dict>
 			<key>primary</key>
 			<true/>

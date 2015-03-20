@@ -8,8 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		0552F70201608093658384F4 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C12E98B00774ED31D5AB2885 /* libPods.a */; };
+		119F855E3870B7B65250C77D /* libPods-PeopleCRM.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 575875B760230110959A8EAC /* libPods-PeopleCRM.a */; };
+		43711FB7AB5E92B559C067EA /* libPods-PeopleCRMTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4688D38FFD3C200C528A9C49 /* libPods-PeopleCRMTests.a */; };
 		62339D421AB362B100C89CC9 /* Twitter_API_Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = 62339D411AB362B100C89CC9 /* Twitter_API_Keys.plist */; };
 		62339D451AB363E600C89CC9 /* TwitterClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 62339D441AB363E600C89CC9 /* TwitterClient.m */; };
+		626DDA2B1ABBBFDD005371FC /* Pods-PeopleCRM.debug.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 626DDA291ABBBFDD005371FC /* Pods-PeopleCRM.debug.xcconfig */; };
+		626DDA2C1ABBBFDD005371FC /* Pods-PeopleCRM.release.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 626DDA2A1ABBBFDD005371FC /* Pods-PeopleCRM.release.xcconfig */; };
+		626DDA311ABBC0C7005371FC /* PersonDetailViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 626DDA301ABBC0C7005371FC /* PersonDetailViewModelTest.m */; };
+		626DDA361ABBC2D7005371FC /* PersonAddingViewModelTest.m in Sources */ = {isa = PBXBuildFile; fileRef = 626DDA351ABBC2D7005371FC /* PersonAddingViewModelTest.m */; };
 		62B707C01AAFD4730031A941 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707BF1AAFD4730031A941 /* main.m */; };
 		62B707C31AAFD4730031A941 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707C21AAFD4730031A941 /* AppDelegate.m */; };
 		62B707C61AAFD4730031A941 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 62B707C51AAFD4730031A941 /* ViewController.m */; };
@@ -28,7 +34,7 @@
 		62DF01BD1AB7CD6F00E3B6F0 /* PersonCollectionViewCellDetails.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62DF01B71AB7CD6F00E3B6F0 /* PersonCollectionViewCellDetails.xib */; };
 		62DF01BE1AB7CD6F00E3B6F0 /* PersonCollectionViewAdding.xib in Resources */ = {isa = PBXBuildFile; fileRef = 62DF01B91AB7CD6F00E3B6F0 /* PersonCollectionViewAdding.xib */; };
 		62DF01C11AB7CDE600E3B6F0 /* PersonCollectionViewCellDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DF01C01AB7CDE600E3B6F0 /* PersonCollectionViewCellDetails.m */; };
-		62DF01C41AB7CE7D00E3B6F0 /* PersonDetailsViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DF01C31AB7CE7D00E3B6F0 /* PersonDetailsViewModel.m */; };
+		62DF01C41AB7CE7D00E3B6F0 /* PersonDetailViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DF01C31AB7CE7D00E3B6F0 /* PersonDetailViewModel.m */; };
 		62DF01C71AB7D16400E3B6F0 /* PersonAddingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DF01C61AB7D16400E3B6F0 /* PersonAddingView.m */; };
 		62DF01CA1AB7D18600E3B6F0 /* PersonAddingViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 62DF01C91AB7D18600E3B6F0 /* PersonAddingViewModel.m */; };
 /* End PBXBuildFile section */
@@ -44,10 +50,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		14D50F521CA2E326C9824B36 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		4688D38FFD3C200C528A9C49 /* libPods-PeopleCRMTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PeopleCRMTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		575875B760230110959A8EAC /* libPods-PeopleCRM.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PeopleCRM.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5CCCF129913E89D21A4B4495 /* Pods-PeopleCRMTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleCRMTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleCRMTests/Pods-PeopleCRMTests.release.xcconfig"; sourceTree = "<group>"; };
 		62339D411AB362B100C89CC9 /* Twitter_API_Keys.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Twitter_API_Keys.plist; sourceTree = "<group>"; };
 		62339D431AB363E600C89CC9 /* TwitterClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TwitterClient.h; sourceTree = "<group>"; };
 		62339D441AB363E600C89CC9 /* TwitterClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TwitterClient.m; sourceTree = "<group>"; };
+		626DDA291ABBBFDD005371FC /* Pods-PeopleCRM.debug.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-PeopleCRM.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleCRM/Pods-PeopleCRM.debug.xcconfig"; sourceTree = "<group>"; };
+		626DDA2A1ABBBFDD005371FC /* Pods-PeopleCRM.release.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Pods-PeopleCRM.release.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleCRM/Pods-PeopleCRM.release.xcconfig"; sourceTree = "<group>"; };
+		626DDA301ABBC0C7005371FC /* PersonDetailViewModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDetailViewModelTest.m; sourceTree = "<group>"; };
+		626DDA351ABBC2D7005371FC /* PersonAddingViewModelTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonAddingViewModelTest.m; sourceTree = "<group>"; };
 		62B707BA1AAFD4730031A941 /* PeopleCRM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PeopleCRM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		62B707BE1AAFD4730031A941 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		62B707BF1AAFD4730031A941 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -77,13 +89,13 @@
 		62DF01B91AB7CD6F00E3B6F0 /* PersonCollectionViewAdding.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonCollectionViewAdding.xib; sourceTree = "<group>"; };
 		62DF01BF1AB7CDE600E3B6F0 /* PersonCollectionViewCellDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonCollectionViewCellDetails.h; sourceTree = "<group>"; };
 		62DF01C01AB7CDE600E3B6F0 /* PersonCollectionViewCellDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonCollectionViewCellDetails.m; sourceTree = "<group>"; };
-		62DF01C21AB7CE7D00E3B6F0 /* PersonDetailsViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDetailsViewModel.h; sourceTree = "<group>"; };
-		62DF01C31AB7CE7D00E3B6F0 /* PersonDetailsViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDetailsViewModel.m; sourceTree = "<group>"; };
+		62DF01C21AB7CE7D00E3B6F0 /* PersonDetailViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDetailViewModel.h; sourceTree = "<group>"; };
+		62DF01C31AB7CE7D00E3B6F0 /* PersonDetailViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDetailViewModel.m; sourceTree = "<group>"; };
 		62DF01C51AB7D16400E3B6F0 /* PersonAddingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonAddingView.h; sourceTree = "<group>"; };
 		62DF01C61AB7D16400E3B6F0 /* PersonAddingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonAddingView.m; sourceTree = "<group>"; };
 		62DF01C81AB7D18600E3B6F0 /* PersonAddingViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonAddingViewModel.h; sourceTree = "<group>"; };
 		62DF01C91AB7D18600E3B6F0 /* PersonAddingViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonAddingViewModel.m; sourceTree = "<group>"; };
-		671CA53971DA7818CC90A69F /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		9CECD66D813B5C7B97B33CE2 /* Pods-PeopleCRMTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PeopleCRMTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PeopleCRMTests/Pods-PeopleCRMTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C12E98B00774ED31D5AB2885 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -93,6 +105,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0552F70201608093658384F4 /* libPods.a in Frameworks */,
+				119F855E3870B7B65250C77D /* libPods-PeopleCRM.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				43711FB7AB5E92B559C067EA /* libPods-PeopleCRMTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,6 +124,8 @@
 			isa = PBXGroup;
 			children = (
 				C12E98B00774ED31D5AB2885 /* libPods.a */,
+				575875B760230110959A8EAC /* libPods-PeopleCRM.a */,
+				4688D38FFD3C200C528A9C49 /* libPods-PeopleCRMTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -130,6 +146,39 @@
 				62339D411AB362B100C89CC9 /* Twitter_API_Keys.plist */,
 			);
 			path = Keys;
+			sourceTree = "<group>";
+		};
+		626DDA2D1ABBC043005371FC /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				626DDA2E1ABBC043005371FC /* PersonCollectionViewCell */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		626DDA2E1ABBC043005371FC /* PersonCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				626DDA341ABBC2D7005371FC /* PersonAddingView */,
+				626DDA2F1ABBC043005371FC /* PersonDetailView */,
+			);
+			path = PersonCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		626DDA2F1ABBC043005371FC /* PersonDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				626DDA301ABBC0C7005371FC /* PersonDetailViewModelTest.m */,
+			);
+			path = PersonDetailView;
+			sourceTree = "<group>";
+		};
+		626DDA341ABBC2D7005371FC /* PersonAddingView */ = {
+			isa = PBXGroup;
+			children = (
+				626DDA351ABBC2D7005371FC /* PersonAddingViewModelTest.m */,
+			);
+			path = PersonAddingView;
 			sourceTree = "<group>";
 		};
 		62B707B11AAFD4730031A941 = {
@@ -184,6 +233,7 @@
 		62B707D61AAFD4730031A941 /* PeopleCRMTests */ = {
 			isa = PBXGroup;
 			children = (
+				626DDA2D1ABBC043005371FC /* Views */,
 				62B707D91AAFD4730031A941 /* PeopleCRMTests.m */,
 				62B707D71AAFD4730031A941 /* Supporting Files */,
 			);
@@ -262,8 +312,8 @@
 				62DF01B71AB7CD6F00E3B6F0 /* PersonCollectionViewCellDetails.xib */,
 				62DF01BF1AB7CDE600E3B6F0 /* PersonCollectionViewCellDetails.h */,
 				62DF01C01AB7CDE600E3B6F0 /* PersonCollectionViewCellDetails.m */,
-				62DF01C21AB7CE7D00E3B6F0 /* PersonDetailsViewModel.h */,
-				62DF01C31AB7CE7D00E3B6F0 /* PersonDetailsViewModel.m */,
+				62DF01C21AB7CE7D00E3B6F0 /* PersonDetailViewModel.h */,
+				62DF01C31AB7CE7D00E3B6F0 /* PersonDetailViewModel.m */,
 			);
 			path = PersonDetailView;
 			sourceTree = "<group>";
@@ -283,8 +333,10 @@
 		DB7529FF25907ABDE2BD1E1A /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				14D50F521CA2E326C9824B36 /* Pods.debug.xcconfig */,
-				671CA53971DA7818CC90A69F /* Pods.release.xcconfig */,
+				626DDA291ABBBFDD005371FC /* Pods-PeopleCRM.debug.xcconfig */,
+				626DDA2A1ABBBFDD005371FC /* Pods-PeopleCRM.release.xcconfig */,
+				9CECD66D813B5C7B97B33CE2 /* Pods-PeopleCRMTests.debug.xcconfig */,
+				5CCCF129913E89D21A4B4495 /* Pods-PeopleCRMTests.release.xcconfig */,
 			);
 			name = Pods;
 			sourceTree = "<group>";
@@ -315,9 +367,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 62B707E01AAFD4730031A941 /* Build configuration list for PBXNativeTarget "PeopleCRMTests" */;
 			buildPhases = (
+				E8A1822AEC04EACFB3366206 /* Check Pods Manifest.lock */,
 				62B707CF1AAFD4730031A941 /* Sources */,
 				62B707D01AAFD4730031A941 /* Frameworks */,
 				62B707D11AAFD4730031A941 /* Resources */,
+				C6D1FC1130148ACA4F0F23E6 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -372,11 +426,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				62B707EF1AAFED690031A941 /* twitter_logo.png in Resources */,
+				626DDA2B1ABBBFDD005371FC /* Pods-PeopleCRM.debug.xcconfig in Resources */,
 				62B707EE1AAFED690031A941 /* github_logo.png in Resources */,
 				62DF01BE1AB7CD6F00E3B6F0 /* PersonCollectionViewAdding.xib in Resources */,
 				62B707C91AAFD4730031A941 /* Main.storyboard in Resources */,
 				62B707CE1AAFD4730031A941 /* LaunchScreen.xib in Resources */,
 				62DF01BB1AB7CD6F00E3B6F0 /* PersonCollectionReusableView.xib in Resources */,
+				626DDA2C1ABBBFDD005371FC /* Pods-PeopleCRM.release.xcconfig in Resources */,
 				62B707CB1AAFD4730031A941 /* Images.xcassets in Resources */,
 				62B707F11AAFEFE20031A941 /* avatar_placeholder.png in Resources */,
 				62339D421AB362B100C89CC9 /* Twitter_API_Keys.plist in Resources */,
@@ -421,7 +477,37 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeopleCRM/Pods-PeopleCRM-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C6D1FC1130148ACA4F0F23E6 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PeopleCRMTests/Pods-PeopleCRMTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E8A1822AEC04EACFB3366206 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -432,7 +518,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				62DF01CA1AB7D18600E3B6F0 /* PersonAddingViewModel.m in Sources */,
-				62DF01C41AB7CE7D00E3B6F0 /* PersonDetailsViewModel.m in Sources */,
+				62DF01C41AB7CE7D00E3B6F0 /* PersonDetailViewModel.m in Sources */,
 				62DF01BC1AB7CD6F00E3B6F0 /* PersonCollectionReusableViewModel.m in Sources */,
 				62B707C61AAFD4730031A941 /* ViewController.m in Sources */,
 				62B707C31AAFD4730031A941 /* AppDelegate.m in Sources */,
@@ -450,7 +536,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				626DDA311ABBC0C7005371FC /* PersonDetailViewModelTest.m in Sources */,
 				62B707DA1AAFD4730031A941 /* PeopleCRMTests.m in Sources */,
+				626DDA361ABBC2D7005371FC /* PersonAddingViewModelTest.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -566,7 +654,7 @@
 		};
 		62B707DE1AAFD4730031A941 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 14D50F521CA2E326C9824B36 /* Pods.debug.xcconfig */;
+			baseConfigurationReference = 626DDA291ABBBFDD005371FC /* Pods-PeopleCRM.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PeopleCRM/Info.plist;
@@ -577,7 +665,7 @@
 		};
 		62B707DF1AAFD4730031A941 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 671CA53971DA7818CC90A69F /* Pods.release.xcconfig */;
+			baseConfigurationReference = 626DDA2A1ABBBFDD005371FC /* Pods-PeopleCRM.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = PeopleCRM/Info.plist;
@@ -588,6 +676,7 @@
 		};
 		62B707E11AAFD4730031A941 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CECD66D813B5C7B97B33CE2 /* Pods-PeopleCRMTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -607,6 +696,7 @@
 		};
 		62B707E21AAFD4730031A941 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CCCF129913E89D21A4B4495 /* Pods-PeopleCRMTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (

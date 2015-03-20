@@ -8,11 +8,15 @@
 
 #import <Foundation/Foundation.h>
 #import "ReactiveCocoa.h"
+#import "TwitterClient.h"
 
 @interface PersonAddingViewModel : NSObject
 
 @property (strong) RACCommand *addTwitterButtonCommand;
 @property (strong) RACSignal *errorViewHiddenSignal;
 @property (strong) NSString *usernameSearchText;
+@property (strong) RACSignal *addButtonEnabledSignal;
+
+- (id)initWithTwitterClient:(TwitterClient *)twitterClient;
 
 @end

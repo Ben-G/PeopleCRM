@@ -11,6 +11,6 @@
 
 @interface TwitterClient : NSObject
 
-+ (RACSignal *)avatarForUsername:(NSString *)username;
+- (RACSignal *)avatarForUsername:(NSString *)username;
 
 @end
