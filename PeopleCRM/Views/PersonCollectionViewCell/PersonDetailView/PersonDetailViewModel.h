@@ -13,9 +13,10 @@
 @interface PersonDetailViewModel : NSObject
 
 @property (strong) RACCommand *editButtonCommand;
-@property (strong) UIImage *avatar;
-@property (strong) NSString *name;
-@property (strong) NSString *notes;
+@property (strong, readonly) UIImage *avatar;
+@property (strong, readonly) NSString *name;
+@property (strong, readonly) NSString *notes;
+@property (strong, readonly) NSString *twitterHandle;
 
 - (id)initWithModel:(Person *)person;
 

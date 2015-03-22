@@ -16,6 +16,7 @@
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
 @property (weak, nonatomic) IBOutlet UILabel *nameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *notesLabel;
+@property (weak, nonatomic) IBOutlet UILabel *twitterLabel;
 
 @end
 
@@ -25,6 +26,7 @@
   RAC(self, avatarImageView.image) = RACObserve(self, viewModel.avatar);
   RAC(self, nameLabel.text) = RACObserve(self, viewModel.name);
   RAC(self, notesLabel.text) = RACObserve(self, viewModel.notes);
+  RAC(self, twitterLabel.text) = RACObserve(self, viewModel.twitterHandle);
   
   [RACObserve(self, viewModel) subscribeNext:^(id x) {
     self.editButton.rac_command = self.viewModel.editButtonCommand;

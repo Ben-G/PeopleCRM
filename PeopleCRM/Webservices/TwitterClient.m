@@ -24,7 +24,8 @@
     deliverOn:bgScheduler] flattenMap:^RACStream *(NSDictionary *userInfo) {
     
     NSDictionary *userDetails = @{@"name": userInfo[@"name"],
-                                  @"description": userInfo[@"description"]};
+                                  @"description": userInfo[@"description"],
+                                  @"twitterHandle": userInfo[@"screen_name"]};
     
     NSString *downloadURL = [userInfo[@"profile_image_url_https"] stringByReplacingOccurrencesOfString:@"normal" withString:@"bigger"];
     

@@ -29,6 +29,7 @@
     RAC(self, avatar) = RACObserve(self.person, avatar);
     RAC(self, name) = RACObserve(self.person, name);
     RAC(self, notes) = RACObserve(self.person, notes);
+    RAC(self, twitterHandle) = RACObserve(self.person, twitterUsername);
   }
   
   return self;

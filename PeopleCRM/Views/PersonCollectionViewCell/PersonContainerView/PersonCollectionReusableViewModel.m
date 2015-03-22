@@ -52,6 +52,10 @@
       return avatar;
     }];
     
+    RAC(self.person, twitterUsername) = [twitterFetchSignal reduceEach:^id(UIImage *avatar, NSDictionary *userInfo) {
+      return userInfo[@"twitterHandle"];
+    }];
+    
     RAC(self.person, name) = [twitterFetchSignal reduceEach:^id(UIImage *avatar, NSDictionary *userInfo){
       return userInfo[@"name"];
     }];
