@@ -38,6 +38,41 @@
     [self.innerContentView.subviews makeObjectsPerformSelector: @selector(removeFromSuperview)];
     [self.innerContentView addSubview:newView];
     
+    newView.translatesAutoresizingMaskIntoConstraints = NO;
+    
+    [self.innerContentView addConstraint:[NSLayoutConstraint constraintWithItem:newView
+                                                              attribute:NSLayoutAttributeTop
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self.innerContentView
+                                                              attribute:NSLayoutAttributeTop
+                                                             multiplier:1.0
+                                                               constant:0.0]];
+    
+    [self.innerContentView addConstraint:[NSLayoutConstraint constraintWithItem:newView
+                                                              attribute:NSLayoutAttributeLeading
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self.innerContentView
+                                                              attribute:NSLayoutAttributeLeading
+                                                             multiplier:1.0
+                                                               constant:0.0]];
+    
+    [self.innerContentView addConstraint:[NSLayoutConstraint constraintWithItem:newView
+                                                              attribute:NSLayoutAttributeBottom
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self.innerContentView
+                                                              attribute:NSLayoutAttributeBottom
+                                                             multiplier:1.0
+                                                               constant:0.0]];
+    
+    [self.innerContentView addConstraint:[NSLayoutConstraint constraintWithItem:newView
+                                                              attribute:NSLayoutAttributeTrailing
+                                                              relatedBy:NSLayoutRelationEqual
+                                                                 toItem:self.innerContentView
+                                                              attribute:NSLayoutAttributeTrailing
+                                                             multiplier:1.0
+                                                               constant:0.0]];
+    
+    
     id viewModel = [self.viewModel viewModelforUIState];
     id newViewID = (id) newView;
     [newViewID setViewModel:viewModel];

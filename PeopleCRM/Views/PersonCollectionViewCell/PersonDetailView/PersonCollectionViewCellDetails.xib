@@ -33,7 +33,7 @@
                     <nil key="highlightedColor"/>
                 </label>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="@benjaminencz" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OpY-aR-ckt">
-                    <rect key="frame" x="53" y="133" width="181" height="21"/>
+                    <rect key="frame" x="53" y="153" width="181" height="21"/>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
@@ -48,50 +48,32 @@
                     </state>
                 </button>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="twitter_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="jfy-js-b9u">
-                    <rect key="frame" x="8" y="128" width="30" height="30"/>
+                    <rect key="frame" x="8" y="148" width="30" height="30"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="30" id="0NQ-PL-BJf"/>
                         <constraint firstAttribute="height" constant="30" id="83h-oT-1Fq"/>
                     </constraints>
                 </imageView>
-                <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="github_logo.png" translatesAutoresizingMaskIntoConstraints="NO" id="0iq-Hh-fLF">
-                    <rect key="frame" x="8" y="170" width="30" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="width" constant="30" id="noU-Tx-IPM"/>
-                        <constraint firstAttribute="height" constant="30" id="qwD-Gn-84v"/>
-                    </constraints>
-                </imageView>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Ben-G" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="aW3-Ep-N1j">
-                    <rect key="frame" x="53" y="174" width="51" height="21"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                    <nil key="highlightedColor"/>
-                </label>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="OpY-aR-ckt" firstAttribute="centerY" secondItem="jfy-js-b9u" secondAttribute="centerY" id="09O-7z-RQU"/>
                 <constraint firstAttribute="trailing" secondItem="J08-ff-25u" secondAttribute="trailing" constant="8" id="1J7-II-snJ"/>
-                <constraint firstItem="0iq-Hh-fLF" firstAttribute="top" secondItem="jfy-js-b9u" secondAttribute="bottom" constant="12" id="83F-x9-N1B"/>
                 <constraint firstAttribute="trailing" secondItem="OpY-aR-ckt" secondAttribute="trailing" constant="66" id="MhA-fq-TMh"/>
                 <constraint firstItem="OpY-aR-ckt" firstAttribute="leading" secondItem="jfy-js-b9u" secondAttribute="trailing" constant="15" id="Qtw-kb-K7w"/>
                 <constraint firstAttribute="bottom" secondItem="gWV-JO-iZN" secondAttribute="bottom" id="Tg8-N0-x6Y"/>
                 <constraint firstItem="jfy-js-b9u" firstAttribute="top" secondItem="hyP-9F-KbR" secondAttribute="bottom" constant="18" id="Wls-37-vwX"/>
                 <constraint firstAttribute="trailing" secondItem="Lex-J5-oue" secondAttribute="trailing" constant="8" id="Xkv-oq-VMi"/>
                 <constraint firstItem="OpY-aR-ckt" firstAttribute="top" secondItem="hyP-9F-KbR" secondAttribute="bottom" constant="20" id="aNj-lg-Sbi"/>
+                <constraint firstAttribute="bottom" secondItem="jfy-js-b9u" secondAttribute="bottom" constant="32" id="dtW-SA-4OA"/>
                 <constraint firstItem="J08-ff-25u" firstAttribute="leading" secondItem="hyP-9F-KbR" secondAttribute="trailing" constant="16" id="f2j-tR-kLH"/>
                 <constraint firstAttribute="trailing" secondItem="gWV-JO-iZN" secondAttribute="trailing" constant="8" id="hdr-vP-zhb"/>
-                <constraint firstItem="gWV-JO-iZN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aW3-Ep-N1j" secondAttribute="trailing" constant="28" id="ifA-bd-xea"/>
                 <constraint firstItem="jfy-js-b9u" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="iq2-TZ-TbP"/>
                 <constraint firstItem="hyP-9F-KbR" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="ixJ-xH-PzR"/>
                 <constraint firstItem="J08-ff-25u" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="jQQ-eb-UJ6"/>
                 <constraint firstItem="Lex-J5-oue" firstAttribute="top" secondItem="J08-ff-25u" secondAttribute="bottom" constant="8" id="jpG-s3-4A2"/>
-                <constraint firstItem="0iq-Hh-fLF" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="nH8-mp-Iju"/>
                 <constraint firstItem="hyP-9F-KbR" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="oeR-9B-qBT"/>
                 <constraint firstItem="Lex-J5-oue" firstAttribute="leading" secondItem="hyP-9F-KbR" secondAttribute="trailing" constant="16" id="pO2-BQ-j9J"/>
-                <constraint firstAttribute="bottom" secondItem="0iq-Hh-fLF" secondAttribute="bottom" constant="10" id="uqn-Ks-hwr"/>
-                <constraint firstItem="aW3-Ep-N1j" firstAttribute="centerY" secondItem="0iq-Hh-fLF" secondAttribute="centerY" id="yYu-Sh-Wea"/>
-                <constraint firstItem="aW3-Ep-N1j" firstAttribute="leading" secondItem="0iq-Hh-fLF" secondAttribute="trailing" constant="15" id="z0h-dy-imq"/>
             </constraints>
             <nil key="simulatedStatusBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -106,13 +88,13 @@
                 <outlet property="editButton" destination="gWV-JO-iZN" id="G2A-J3-3Ws"/>
                 <outlet property="nameLabel" destination="J08-ff-25u" id="nbq-ey-OHr"/>
                 <outlet property="notesLabel" destination="Lex-J5-oue" id="VA9-44-XXg"/>
+                <outlet property="twitterLabel" destination="OpY-aR-ckt" id="XZL-c3-SFJ"/>
             </connections>
             <point key="canvasLocation" x="258" y="162"/>
         </view>
     </objects>
     <resources>
         <image name="avatar_placeholder.png" width="512" height="512"/>
-        <image name="github_logo.png" width="256" height="256"/>
         <image name="twitter_logo.png" width="1139" height="926"/>
     </resources>
 </document>

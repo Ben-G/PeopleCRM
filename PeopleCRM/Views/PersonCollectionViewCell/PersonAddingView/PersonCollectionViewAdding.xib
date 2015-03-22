@@ -10,24 +10,33 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="210"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="@Twitter Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uWV-fE-JAh">
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="@Twitter Username" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uWV-fE-JAh">
                     <rect key="frame" x="38" y="90" width="235" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="0CI-HN-dsg"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits"/>
                 </textField>
-                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Add new Person" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60F-Jn-EQT">
-                    <rect key="frame" x="84" y="8" width="127" height="21"/>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new Person" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="60F-Jn-EQT">
+                    <rect key="frame" x="87" y="8" width="127" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="36Q-cr-msL"/>
+                    </constraints>
                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     <nil key="highlightedColor"/>
                 </label>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAp-vF-PS6">
-                    <rect key="frame" x="132" y="133" width="30" height="30"/>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aAp-vF-PS6">
+                    <rect key="frame" x="135" y="133" width="30" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="2Hc-Vc-RFl"/>
+                    </constraints>
                     <state key="normal" title="Add">
                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
                 </button>
-                <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xfa-MS-xMn">
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xfa-MS-xMn">
                     <rect key="frame" x="0.0" y="42" width="300" height="35"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Found no one with this username :(" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lZj-eD-G3r">
@@ -38,10 +47,40 @@
                         </label>
                     </subviews>
                     <color key="backgroundColor" red="0.93517203282828287" green="0.2095839867036122" blue="0.13138372446086166" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="QBX-aV-sBA"/>
+                    </constraints>
                 </view>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="aAp-vF-PS6" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="132" id="00m-Go-ypp"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="aAp-vF-PS6" secondAttribute="bottom" constant="10" id="42S-id-d1h"/>
+                <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="aAp-vF-PS6" secondAttribute="bottom" constant="47" id="6iH-fl-Q6e"/>
+                <constraint firstAttribute="trailing" secondItem="60F-Jn-EQT" secondAttribute="trailing" constant="89" id="9lA-5c-mHu"/>
+                <constraint firstAttribute="trailing" secondItem="xfa-MS-xMn" secondAttribute="trailing" id="BVq-S0-UIN"/>
+                <constraint firstItem="aAp-vF-PS6" firstAttribute="top" secondItem="uWV-fE-JAh" secondAttribute="bottom" constant="13" id="CQ5-37-5bP"/>
+                <constraint firstItem="60F-Jn-EQT" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="8" id="Ghf-KL-YKB"/>
+                <constraint firstAttribute="trailing" secondItem="uWV-fE-JAh" secondAttribute="trailing" constant="27" id="GtJ-fJ-B6t"/>
+                <constraint firstAttribute="centerX" secondItem="aAp-vF-PS6" secondAttribute="centerX" id="OQN-bn-W8t"/>
+                <constraint firstItem="xfa-MS-xMn" firstAttribute="top" secondItem="60F-Jn-EQT" secondAttribute="bottom" constant="13" id="XiA-l6-OSJ"/>
+                <constraint firstItem="60F-Jn-EQT" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="84" id="Z0k-Ne-urI"/>
+                <constraint firstItem="uWV-fE-JAh" firstAttribute="top" secondItem="xfa-MS-xMn" secondAttribute="bottom" constant="13" id="c4b-fC-BTN"/>
+                <constraint firstAttribute="trailing" relation="lessThanOrEqual" secondItem="aAp-vF-PS6" secondAttribute="trailing" constant="138" id="dZg-yg-xo4"/>
+                <constraint firstItem="uWV-fE-JAh" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="38" id="jMd-aB-LLd"/>
+                <constraint firstAttribute="centerX" secondItem="60F-Jn-EQT" secondAttribute="centerX" id="ng7-4J-Gkx"/>
+                <constraint firstItem="xfa-MS-xMn" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="npC-d1-dzQ"/>
+            </constraints>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="9lA-5c-mHu"/>
+                    <exclude reference="Z0k-Ne-urI"/>
+                    <exclude reference="00m-Go-ypp"/>
+                    <exclude reference="6iH-fl-Q6e"/>
+                    <exclude reference="dZg-yg-xo4"/>
+                </mask>
+            </variation>
             <connections>
                 <outlet property="addTwitterButton" destination="aAp-vF-PS6" id="q6D-Ro-67D"/>
                 <outlet property="errorView" destination="xfa-MS-xMn" id="uVd-bD-yWV"/>
