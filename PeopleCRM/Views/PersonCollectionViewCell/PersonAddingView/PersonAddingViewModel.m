@@ -26,8 +26,6 @@
   if (self) {
     self.twitterClient = twitterClient;
     
-    
-    
     self.addButtonEnabledSignal = [RACObserve(self, usernameSearchText)
                                    map:^id(NSString *searchText) {
       if (!searchText || [searchText  isEqualToString:@""]) {
@@ -46,6 +44,19 @@
           return signal;
         }
     ];
+    
+    RACSignal *twitterSignal = [[[self.addTwitterButtonCommand.errors
+                                 merge:self.addTwitterButtonCommand.executionSignals]
+                                 merge:[self.addTwitterButtonCommand.executionSignals concat]] materialize];
+    
+    self.textFieldEnabledSignal = [twitterSignal map:^id(RACEvent *event) {
+      if (event.eventType == RACEventTypeNext && ![event.value isKindOfClass:[NSError class]]) {
+        // disable when we receive signals from RACCommand (network request starting)
+        return @(NO);
+      } else {
+        return @(YES);
+      }
+    }];
     
     // subscribing to RACCommandErrors is special case
     self.errorViewHiddenSignal = [[[[[self.addTwitterButtonCommand.executionSignals concat] merge: self.addTwitterButtonCommand.errors] startWith:@(YES)] map:^id(id value) {

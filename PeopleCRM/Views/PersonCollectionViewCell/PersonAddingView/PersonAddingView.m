@@ -24,7 +24,7 @@
   [RACObserve(self, viewModel) subscribeNext:^(id x) {
     self.addTwitterButton.rac_command = self.viewModel.addTwitterButtonCommand;
     RAC(self.errorView, hidden) = self.viewModel.errorViewHiddenSignal;
-    
+    RAC(self.usernameTextfield, enabled) = self.viewModel.textFieldEnabledSignal;
     // two-way bind textfield and usernameSearchText
     RACChannelTerminal *modelTerminal = RACChannelTo(self.viewModel, usernameSearchText);
     RACChannelTerminal *textFieldTerminal = [self.usernameTextfield rac_newTextChannel];

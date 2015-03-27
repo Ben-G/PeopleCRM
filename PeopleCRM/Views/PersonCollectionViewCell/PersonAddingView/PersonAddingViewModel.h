@@ -16,6 +16,7 @@
 @property (strong) RACSignal *errorViewHiddenSignal;
 @property (strong) NSString *usernameSearchText;
 @property (strong) RACSignal *addButtonEnabledSignal;
+@property (strong) RACSignal *textFieldEnabledSignal;
 
 - (id)initWithTwitterClient:(TwitterClient *)twitterClient;
 
