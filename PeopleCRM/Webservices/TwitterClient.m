@@ -13,23 +13,24 @@
 
 @implementation TwitterClient
 
-- (RACSignal *)avatarForUsername:(NSString *)username {
-  RACScheduler *bgScheduler = [RACScheduler scheduler];
+- (RACSignal *)infoForUsername:(NSString *)username {
+  RACScheduler *bgScheduler =
+    [RACScheduler schedulerWithPriority:RACSchedulerPriorityBackground];
   
-  return [[[[[self _login]
+  return [[[[self _login]
     deliverOn:bgScheduler]
     flattenMap:^RACStream *(STTwitterAPI *client) {
     return [self client:client fetchUserInfo:username];
-  }]
-    deliverOn:bgScheduler] flattenMap:^RACStream *(NSDictionary *userInfo) {
-    
+  }] flattenMap:^RACStream *(NSDictionary *userInfo) {
     NSDictionary *userDetails = @{@"name": userInfo[@"name"],
                                   @"description": userInfo[@"description"],
                                   @"twitterHandle": userInfo[@"screen_name"]};
     
-    NSString *downloadURL = [userInfo[@"profile_image_url_https"] stringByReplacingOccurrencesOfString:@"normal" withString:@"bigger"];
+    NSString *downloadURL = [userInfo[@"profile_image_url_https"]
+      stringByReplacingOccurrencesOfString:@"normal" withString:@"bigger"];
     
-    return [[self imageFromURLString:downloadURL] combineLatestWith:[RACSignal return:userDetails]];
+    return [[self imageFromURLString:downloadURL]
+            combineLatestWith:[RACSignal return:userDetails]];
   }];
 }
 
@@ -45,9 +46,7 @@
     
     return nil;
   }];
-}
-
-;
+};
 
 //TODO: move image download out
 - (RACSignal *)imageFromURLString:(NSString *)urlString {

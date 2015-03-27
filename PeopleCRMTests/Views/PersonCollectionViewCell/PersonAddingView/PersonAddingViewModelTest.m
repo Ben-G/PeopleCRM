@@ -47,13 +47,13 @@ describe(@"PersonDetailViewModel_addButton", ^{
   it(@"calls the Twitter API when add button is tapped", ^{
     id twitterClient = [TwitterClient new];
     id twitterMock = OCMPartialMock(twitterClient);
-    OCMStub([twitterMock avatarForUsername:@"username"]).andReturn([RACSignal return:@(YES)]);
+    OCMStub([twitterMock infoForUsername:@"username"]).andReturn([RACSignal return:@(YES)]);
     
     viewModel = [[PersonAddingViewModel alloc] initWithTwitterClient:twitterMock];
     viewModel.usernameSearchText = @"username";
     [viewModel.addTwitterButtonCommand execute:nil];
     
-    OCMVerify([twitterMock avatarForUsername:@"username"]);
+    OCMVerify([twitterMock infoForUsername:@"username"]);
   });
   
 });
@@ -64,7 +64,7 @@ describe(@"PersonDetailViewModel_errorMessage", ^{
     id twitterClient = [TwitterClient new];
     id twitterMock = OCMPartialMock(twitterClient);
     RACSignal *signal = [RACSignal error:[NSError new]];
-    OCMStub([twitterMock avatarForUsername:[OCMArg any]]).andReturn(signal);
+    OCMStub([twitterMock infoForUsername:[OCMArg any]]).andReturn(signal);
     
     viewModel = [[PersonAddingViewModel alloc] initWithTwitterClient:twitterClient];
     // enable command

@@ -26,7 +26,10 @@
   if (self) {
     self.twitterClient = twitterClient;
     
-    self.addButtonEnabledSignal = [RACObserve(self, usernameSearchText) map:^id(NSString *searchText) {
+    
+    
+    self.addButtonEnabledSignal = [RACObserve(self, usernameSearchText)
+                                   map:^id(NSString *searchText) {
       if (!searchText || [searchText  isEqualToString:@""]) {
         return @(NO);
       } else {
@@ -34,11 +37,15 @@
       }
     }];
     
-    self.addTwitterButtonCommand = [[RACCommand alloc] initWithEnabled:self.addButtonEnabledSignal signalBlock:^RACSignal *(id input) {
-      RACSignal *signal = [self.twitterClient avatarForUsername:self.usernameSearchText];
+    self.addTwitterButtonCommand = [[RACCommand alloc]
+      initWithEnabled:self.addButtonEnabledSignal
+        signalBlock:^RACSignal *(id input) {
+          RACSignal *signal = [[self.twitterClient
+            infoForUsername:self.usernameSearchText] delay:1.f];
       
-      return signal;
-    }];
+          return signal;
+        }
+    ];
     
     // subscribing to RACCommandErrors is special case
     self.errorViewHiddenSignal = [[[[[self.addTwitterButtonCommand.executionSignals concat] merge: self.addTwitterButtonCommand.errors] startWith:@(YES)] map:^id(id value) {
