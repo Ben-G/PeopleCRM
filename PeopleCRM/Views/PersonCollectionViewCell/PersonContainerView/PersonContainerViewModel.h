@@ -16,7 +16,7 @@ typedef NS_ENUM(NSInteger, PersonCollectionReusableViewState) {
   PersonCollectionReusableViewStateDetails
 };
 
-@interface PersonCollectionReusableViewModel : NSObject
+@interface PersonContainerViewModel : NSObject
 
 @property (strong) NSNumber *UIState;
 

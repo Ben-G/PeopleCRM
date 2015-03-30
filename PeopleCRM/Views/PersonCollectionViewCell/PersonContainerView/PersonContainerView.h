@@ -8,10 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@class PersonCollectionReusableViewModel;
+@class PersonContainerViewModel;
 
-@interface PersonCollectionReusableView : UICollectionReusableView
+@interface PersonContainerView : UICollectionReusableView
 
-@property (strong, nonatomic) PersonCollectionReusableViewModel *viewModel;
+@property (strong, nonatomic) PersonContainerViewModel *viewModel;
 
 @end

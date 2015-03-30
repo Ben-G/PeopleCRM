@@ -6,14 +6,14 @@
 //  Copyright (c) 2015 Benjamin Encz. All rights reserved.
 //
 
-#import "PersonCollectionReusableViewModel.h"
+#import "PersonContainerViewModel.h"
 #import "Person.h"
 #import "TwitterClient.h"
 
 #import "PersonDetailViewModel.h"
 #import "PersonAddingViewModel.h"
 
-@interface PersonCollectionReusableViewModel()
+@interface PersonContainerViewModel()
 
 @property (strong, nonatomic) Person *person;
 @property (strong, nonatomic) PersonDetailViewModel *personDetailsViewModel;
@@ -21,7 +21,7 @@
 
 @end
 
-@implementation PersonCollectionReusableViewModel
+@implementation PersonContainerViewModel
 
 - (id)initWithModel:(Person *)person {
   self = [super init];

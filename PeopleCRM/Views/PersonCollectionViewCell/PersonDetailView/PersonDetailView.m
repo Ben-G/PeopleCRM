@@ -6,11 +6,11 @@
 //  Copyright (c) 2015 Benjamin Encz. All rights reserved.
 //
 
-#import "PersonCollectionViewCellDetails.h"
+#import "PersonDetailView.h"
 #import "ReactiveCocoa.h"
 #import "PersonDetailViewModel.h"
 
-@interface PersonCollectionViewCellDetails()
+@interface PersonDetailView()
 
 @property (weak, nonatomic) IBOutlet UIImageView *avatarImageView;
 @property (weak, nonatomic) IBOutlet UIButton *editButton;
@@ -20,7 +20,7 @@
 
 @end
 
-@implementation PersonCollectionViewCellDetails
+@implementation PersonDetailView
 
 - (void)awakeFromNib {
   RAC(self, avatarImageView.image) = RACObserve(self, viewModel.avatar);

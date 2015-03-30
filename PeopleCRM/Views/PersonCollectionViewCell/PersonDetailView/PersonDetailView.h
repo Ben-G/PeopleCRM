@@ -10,7 +10,7 @@
 
 @class PersonDetailViewModel;
 
-@interface PersonCollectionViewCellDetails : UIView
+@interface PersonDetailView : UIView
 
 @property (strong, nonatomic) PersonDetailViewModel *viewModel;
 

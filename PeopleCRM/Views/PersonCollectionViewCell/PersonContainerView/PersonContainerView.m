@@ -6,27 +6,27 @@
 //  Copyright (c) 2015 Benjamin Encz. All rights reserved.
 //
 
-#import "PersonCollectionReusableView.h"
+#import "PersonContainerView.h"
 #import "ReactiveCocoa.h"
-#import "PersonCollectionReusableViewModel.h"
+#import "PersonContainerViewModel.h"
 
-@interface PersonCollectionReusableView()
+@interface PersonContainerView()
 
 @property (weak, nonatomic) IBOutlet UIView *innerContentView;
 @property (strong, nonatomic) UIView *presentedView;
 
 @end
 
-@implementation PersonCollectionReusableView
+@implementation PersonContainerView
 
 - (void)awakeFromNib {
   RAC(self, presentedView) = [RACObserve(self, viewModel.UIState) map:^id(NSNumber *state) {
     switch ([state integerValue]) {
       case PersonCollectionReusableViewStateDetails:
-        return [[[NSBundle mainBundle] loadNibNamed:@"PersonCollectionViewCellDetails" owner:self options:nil] objectAtIndex:0];
+        return [[[NSBundle mainBundle] loadNibNamed:@"PersonDetailView" owner:self options:nil] objectAtIndex:0];
         break;
       case PersonCollectionReusableViewStateAddingTwitter:
-        return [[[NSBundle mainBundle] loadNibNamed:@"PersonCollectionViewAdding" owner:self options:nil] objectAtIndex:0];
+        return [[[NSBundle mainBundle] loadNibNamed:@"PersonAddingView" owner:self options:nil] objectAtIndex:0];
         break;
       default:
         return nil;

@@ -10,8 +10,8 @@
 #import "ReactiveCocoa.h"
 #import "ArrayCollectionViewDataSource.h"
 #import "Person.h"
-#import "PersonCollectionReusableView.h"
-#import "PersonCollectionReusableViewModel.h"
+#import "PersonContainerView.h"
+#import "PersonContainerViewModel.h"
 
 @interface ViewController ()
 
@@ -33,7 +33,7 @@
   @weakify(self)
   // Do any additional setup after loading the view, typically from a nib.
   
-  self.dataSource = [[ArrayCollectionViewDataSource alloc] initWithNibFile:@"PersonCollectionReusableView" configureCellBlock:^(PersonCollectionReusableView *cell, PersonCollectionReusableViewModel *viewModel) {
+  self.dataSource = [[ArrayCollectionViewDataSource alloc] initWithNibFile:@"PersonContainerView" configureCellBlock:^(PersonContainerView *cell, PersonContainerViewModel *viewModel) {
       cell.viewModel = viewModel;
   }];
   
@@ -47,7 +47,7 @@
   self.addPersonButton.rac_command = [[RACCommand alloc] initWithEnabled:self.editModeSignal signalBlock:^RACSignal *(id input) {
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
       @strongify(self);
-      PersonCollectionReusableViewModel *person = [[PersonCollectionReusableViewModel alloc] initWithModel:[Person new]];
+      PersonContainerViewModel *person = [[PersonContainerViewModel alloc] initWithModel:[Person new]];
       self.people = [@[person] arrayByAddingObjectsFromArray:self.people];
       [subscriber sendCompleted];
       
@@ -55,10 +55,10 @@
     }];
   }];
   
-  PersonCollectionReusableViewModel *person1 = [[PersonCollectionReusableViewModel alloc] initWithModel:[Person new]];
-  PersonCollectionReusableViewModel *person2 = [[PersonCollectionReusableViewModel alloc] initWithModel:[Person new]];
-  PersonCollectionReusableViewModel *person3 = [[PersonCollectionReusableViewModel alloc] initWithModel:[Person new]];
-  PersonCollectionReusableViewModel *person4 = [[PersonCollectionReusableViewModel alloc] initWithModel:[Person new]];
+  PersonContainerViewModel *person1 = [[PersonContainerViewModel alloc] initWithModel:[Person new]];
+  PersonContainerViewModel *person2 = [[PersonContainerViewModel alloc] initWithModel:[Person new]];
+  PersonContainerViewModel *person3 = [[PersonContainerViewModel alloc] initWithModel:[Person new]];
+  PersonContainerViewModel *person4 = [[PersonContainerViewModel alloc] initWithModel:[Person new]];
   
   self.people = @[person1, person2, person3, person4];
 }
