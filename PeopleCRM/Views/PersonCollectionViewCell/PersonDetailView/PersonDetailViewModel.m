@@ -8,15 +8,9 @@
 
 #import "PersonDetailViewModel.h"
 
-@interface PersonDetailViewModel()
-
-@property (strong) Person *person;
-
-@end
-
 @implementation PersonDetailViewModel
 
-- (id)initWithModel:(Person *)person {
+- (id)init {
   self = [super init];
   
   if (self) {
@@ -24,12 +18,12 @@
       return [RACSignal return:@(YES)];
     }];
 
-    self.person = person;
-    
-    RAC(self, avatar) = RACObserve(self.person, avatar);
-    RAC(self, name) = RACObserve(self.person, name);
-    RAC(self, notes) = RACObserve(self.person, notes);
-    RAC(self, twitterHandle) = RACObserve(self.person, twitterUsername);
+    [RACObserve(self, person) subscribeNext:^(id x) {
+      RAC(self, avatar) = RACObserve(self.person, avatar);
+      RAC(self, name) = RACObserve(self.person, name);
+      RAC(self, notes) = RACObserve(self.person, notes);
+      RAC(self, twitterHandle) = RACObserve(self.person, twitterUsername);
+    }];
   }
   
   return self;

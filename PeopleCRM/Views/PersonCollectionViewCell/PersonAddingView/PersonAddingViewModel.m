@@ -26,7 +26,8 @@
   if (self) {
     self.twitterClient = twitterClient;
     
-    self.addButtonEnabledSignal = [RACObserve(self, usernameSearchText) map:^id(NSString *searchText) {
+    self.addButtonEnabledSignal = [RACObserve(self, usernameSearchText)
+                                   map:^id(NSString *searchText) {
       if (!searchText || [searchText  isEqualToString:@""]) {
         return @(NO);
       } else {
@@ -34,10 +35,27 @@
       }
     }];
     
-    self.addTwitterButtonCommand = [[RACCommand alloc] initWithEnabled:self.addButtonEnabledSignal signalBlock:^RACSignal *(id input) {
-      RACSignal *signal = [self.twitterClient avatarForUsername:self.usernameSearchText];
+    self.addTwitterButtonCommand = [[RACCommand alloc]
+      initWithEnabled:self.addButtonEnabledSignal
+        signalBlock:^RACSignal *(id input) {
+          RACSignal *signal = [[self.twitterClient
+            infoForUsername:self.usernameSearchText] delay:1.f];
       
-      return signal;
+          return signal;
+        }
+    ];
+    
+    RACSignal *twitterSignal = [[[self.addTwitterButtonCommand.errors
+                                 merge:self.addTwitterButtonCommand.executionSignals]
+                                 merge:[self.addTwitterButtonCommand.executionSignals concat]] materialize];
+    
+    self.textFieldEnabledSignal = [twitterSignal map:^id(RACEvent *event) {
+      if (event.eventType == RACEventTypeNext && ![event.value isKindOfClass:[NSError class]]) {
+        // disable when we receive signals from RACCommand (network request starting)
+        return @(NO);
+      } else {
+        return @(YES);
+      }
     }];
     
     // subscribing to RACCommandErrors is special case

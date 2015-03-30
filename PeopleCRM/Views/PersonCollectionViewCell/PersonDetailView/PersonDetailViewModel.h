@@ -17,7 +17,6 @@
 @property (strong, readonly) NSString *name;
 @property (strong, readonly) NSString *notes;
 @property (strong, readonly) NSString *twitterHandle;
-
-- (id)initWithModel:(Person *)person;
+@property (strong) Person *person;
 
 @end

@@ -10,26 +10,30 @@
 #import "STTwitter.h"
 #import "AFNetworking.h"
 #import "RACAFNetworking.h"
+#import "Person.h"
 
 @implementation TwitterClient
 
-- (RACSignal *)avatarForUsername:(NSString *)username {
-  RACScheduler *bgScheduler = [RACScheduler scheduler];
+- (RACSignal *)infoForUsername:(NSString *)username {
+  RACScheduler *bgScheduler =
+    [RACScheduler schedulerWithPriority:RACSchedulerPriorityBackground];
   
   return [[[[[self _login]
     deliverOn:bgScheduler]
     flattenMap:^RACStream *(STTwitterAPI *client) {
     return [self client:client fetchUserInfo:username];
-  }]
-    deliverOn:bgScheduler] flattenMap:^RACStream *(NSDictionary *userInfo) {
-    
+  }] flattenMap:^RACStream *(NSDictionary *userInfo) {
     NSDictionary *userDetails = @{@"name": userInfo[@"name"],
                                   @"description": userInfo[@"description"],
                                   @"twitterHandle": userInfo[@"screen_name"]};
     
-    NSString *downloadURL = [userInfo[@"profile_image_url_https"] stringByReplacingOccurrencesOfString:@"normal" withString:@"bigger"];
+    NSString *downloadURL = [userInfo[@"profile_image_url_https"]
+      stringByReplacingOccurrencesOfString:@"normal" withString:@"bigger"];
     
-    return [[self imageFromURLString:downloadURL] combineLatestWith:[RACSignal return:userDetails]];
+    return [[self imageFromURLString:downloadURL]
+            combineLatestWith:[RACSignal return:userDetails]];
+  }] flattenMap:^RACStream *(RACTuple *personInfoTupel) {
+    return [RACSignal return:[self _personFromUserInfo:personInfoTupel]];
   }];
 }
 
@@ -45,9 +49,7 @@
     
     return nil;
   }];
-}
-
-;
+};
 
 //TODO: move image download out
 - (RACSignal *)imageFromURLString:(NSString *)urlString {
@@ -88,6 +90,14 @@ static STTwitterAPI *_twitterClient;
     // cannot cancel API request
     return nil;
   }];
+}
+
+- (Person *)_personFromUserInfo:(RACTuple *)userInfoTuple {
+  UIImage *avatar = userInfoTuple.first;
+  NSDictionary *userInfo = userInfoTuple.second;
+  
+  return [[Person alloc] initWithName:userInfo[@"name"] twitterName:userInfo[@"twitterHandle"]
+                                notes:userInfo[@"description"] avatar:avatar];
 }
 
 @end

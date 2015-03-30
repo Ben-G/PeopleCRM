@@ -10,9 +10,12 @@
 
 @interface Person : NSObject
 
-@property (copy) NSString *name;
-@property (copy) NSString *twitterUsername;
-@property (copy) NSString *notes;
-@property (strong) UIImage *avatar;
+@property (readonly) NSString *name;
+@property (readonly) NSString *twitterUsername;
+@property (readonly) NSString *notes;
+@property (readonly) UIImage *avatar;
+
+- (instancetype)initWithName:(NSString *)name twitterName:(NSString *)twitterName
+                       notes:(NSString *)notes avatar:(UIImage *)avatar;
 
 @end
