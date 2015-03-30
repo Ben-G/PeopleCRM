@@ -10,4 +10,20 @@
 
 @implementation Person
 
+- (instancetype)initWithName:(NSString *)name
+                 twitterName:(NSString *)twitterName
+                       notes:(NSString *)notes
+                      avatar:(UIImage *)avatar {
+  self = [super init];
+  
+  if (self) {
+    _name = name;
+    _twitterUsername = twitterName;
+    _notes = notes;
+    _avatar = avatar;
+  }
+  
+  return self;
+}
+
 @end

@@ -34,43 +34,13 @@
           return [addingViewModel.addTwitterButtonCommand.executionSignals concat];
     }];
     
-//    RACSignal *UIStateSignal = [[RACObserve(self, personDetailsViewModel)
-//        flattenMap:^RACStream *(id value) {
-//           return [self.personDetailsViewModel.editButtonCommand.executionSignals concat];
-//        }] map:^id(id value) {
-//           return @(PersonCollectionReusableViewStateAddingTwitter);
-//        }];
-    
-    
     RACSignal *UIStateSignal = [[twitterFetchSignal map:^id(id value) {
       return @(PersonCollectionReusableViewStateDetails);
     }] startWith:@(PersonCollectionReusableViewStateAddingTwitter)];
     
     RAC(self, UIState) = UIStateSignal;
-
-//
-//    RACSignal *mergeSignal = [UIStateSignal1 merge:UIStateSignal2];
-    
-    
-    RAC(self.person, avatar) = [twitterFetchSignal reduceEach:
-      ^id(UIImage *avatar, NSDictionary *userInfo){
-        return avatar;
-    }];
-    
-    RAC(self.person, twitterUsername) = [twitterFetchSignal reduceEach:
-      ^id(UIImage *avatar, NSDictionary *userInfo) {
-        return userInfo[@"twitterHandle"];
-    }];
-    
-    RAC(self.person, name) = [twitterFetchSignal reduceEach:
-      ^id(UIImage *avatar, NSDictionary *userInfo){
-        return userInfo[@"name"];
-    }];
-    
-    RAC(self.person, notes) = [twitterFetchSignal reduceEach:
-      ^id(UIImage *avatar, NSDictionary *userInfo){
-        return userInfo[@"description"];
-    }];
+    RAC(self, person) = twitterFetchSignal;
+    RAC(self, personDetailsViewModel.person) = RACObserve(self, person);
   }
   
   return self;
@@ -96,7 +66,7 @@
 
 - (PersonDetailViewModel *)personDetailsViewModel {
   if (!_personDetailsViewModel) {
-    _personDetailsViewModel = [[PersonDetailViewModel alloc] initWithModel:self.person];
+    _personDetailsViewModel = [[PersonDetailViewModel alloc] init];
   }
   
   return _personDetailsViewModel;

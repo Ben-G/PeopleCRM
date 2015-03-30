@@ -16,20 +16,17 @@
 
 SpecBegin(PersonDetailViewModel)
 
-__block PersonDetailViewModel *viewModel;
-__block Person *person;
-
-beforeEach(^{
-  person = [[Person alloc] init];
-  person.name = @"Benjamin Encz";
-  person.twitterUsername = @"benjaminencz";
-  person.notes = @"Test content";
-  viewModel = [[PersonDetailViewModel alloc] initWithModel:person];
-});
-
-afterEach(^{
-  person = nil;
-  viewModel = nil;
-});
+//__block PersonDetailViewModel *viewModel;
+//__block Person *person;
+//
+//beforeEach(^{
+//  person = [[Person alloc] initWithName:@"Benjamin Encz" twitterName:@"benjaminencz" notes:@"Test content" avatar:nil];
+//  viewModel = [[PersonDetailViewModel alloc] init];
+//});
+//
+//afterEach(^{
+//  person = nil;
+//  viewModel = nil;
+//});
 
 SpecEnd

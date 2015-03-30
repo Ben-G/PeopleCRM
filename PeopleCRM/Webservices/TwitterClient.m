@@ -10,6 +10,7 @@
 #import "STTwitter.h"
 #import "AFNetworking.h"
 #import "RACAFNetworking.h"
+#import "Person.h"
 
 @implementation TwitterClient
 
@@ -17,7 +18,7 @@
   RACScheduler *bgScheduler =
     [RACScheduler schedulerWithPriority:RACSchedulerPriorityBackground];
   
-  return [[[[self _login]
+  return [[[[[self _login]
     deliverOn:bgScheduler]
     flattenMap:^RACStream *(STTwitterAPI *client) {
     return [self client:client fetchUserInfo:username];
@@ -31,6 +32,8 @@
     
     return [[self imageFromURLString:downloadURL]
             combineLatestWith:[RACSignal return:userDetails]];
+  }] flattenMap:^RACStream *(RACTuple *personInfoTupel) {
+    return [RACSignal return:[self _personFromUserInfo:personInfoTupel]];
   }];
 }
 
@@ -87,6 +90,14 @@ static STTwitterAPI *_twitterClient;
     // cannot cancel API request
     return nil;
   }];
+}
+
+- (Person *)_personFromUserInfo:(RACTuple *)userInfoTuple {
+  UIImage *avatar = userInfoTuple.first;
+  NSDictionary *userInfo = userInfoTuple.second;
+  
+  return [[Person alloc] initWithName:userInfo[@"name"] twitterName:userInfo[@"twitterHandle"]
+                                notes:userInfo[@"description"] avatar:avatar];
 }
 
 @end
