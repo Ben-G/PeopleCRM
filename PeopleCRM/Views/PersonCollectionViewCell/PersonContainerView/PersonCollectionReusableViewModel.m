@@ -30,9 +30,8 @@
     self.person = person;
     
     RACSignal *twitterFetchSignal = [RACObserve(self, personAddingViewModel)
-       flattenMap:^RACStream *(id value) {
-          return [self.personAddingViewModel.
-            addTwitterButtonCommand.executionSignals concat];
+       flattenMap:^RACStream *(PersonAddingViewModel *addingViewModel) {
+          return [addingViewModel.addTwitterButtonCommand.executionSignals concat];
     }];
     
 //    RACSignal *UIStateSignal = [[RACObserve(self, personDetailsViewModel)
