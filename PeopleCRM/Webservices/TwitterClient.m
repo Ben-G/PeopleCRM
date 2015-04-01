@@ -21,19 +21,20 @@
   return [[[[[self _login]
     deliverOn:bgScheduler]
     flattenMap:^RACStream *(STTwitterAPI *client) {
-    return [self client:client fetchUserInfo:username];
-  }] flattenMap:^RACStream *(NSDictionary *userInfo) {
-    NSDictionary *userDetails = @{@"name": userInfo[@"name"],
+      return [self client:client fetchUserInfo:username];
+    }]
+    flattenMap:^RACStream *(NSDictionary *userInfo) {
+      NSDictionary *userDetails = @{@"name": userInfo[@"name"],
                                   @"description": userInfo[@"description"],
                                   @"twitterHandle": userInfo[@"screen_name"]};
     
-    NSString *downloadURL = [userInfo[@"profile_image_url_https"]
-      stringByReplacingOccurrencesOfString:@"normal" withString:@"bigger"];
+      NSString *downloadURL = [userInfo[@"profile_image_url_https"]stringByReplacingOccurrencesOfString:@"normal" withString:@"bigger"];
     
-    return [[self imageFromURLString:downloadURL]
-            combineLatestWith:[RACSignal return:userDetails]];
-  }] flattenMap:^RACStream *(RACTuple *personInfoTupel) {
-    return [RACSignal return:[self _personFromUserInfo:personInfoTupel]];
+      return [[self imageFromURLString:downloadURL]
+              combineLatestWith:[RACSignal return:userDetails]];
+    }]
+    flattenMap:^RACStream *(RACTuple *personInfoTupel) {
+      return [RACSignal return:[self _personFromUserInfo:personInfoTupel]];
   }];
 }
 
@@ -51,7 +52,6 @@
   }];
 };
 
-//TODO: move image download out
 - (RACSignal *)imageFromURLString:(NSString *)urlString {
   AFHTTPRequestOperationManager *manager = [[AFHTTPRequestOperationManager alloc]
                                             initWithBaseURL:nil];

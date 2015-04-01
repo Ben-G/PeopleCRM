@@ -28,10 +28,7 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
-  //TODO: deactivate all other cells when adding / editing a new one
-  
   @weakify(self)
-  // Do any additional setup after loading the view, typically from a nib.
   
   self.dataSource = [[ArrayCollectionViewDataSource alloc] initWithNibFile:@"PersonContainerView" configureCellBlock:^(PersonContainerView *cell, PersonContainerViewModel *viewModel) {
       cell.viewModel = viewModel;
@@ -41,18 +38,23 @@
   
   RAC(self.dataSource, items) = [RACObserve(self, people) doNext:^(id x) {
     @strongify(self);
+    // reload the table view whenever the list of view models changes
     [self.collectionView reloadData];
   }];
   
   self.addPersonButton.rac_command = [[RACCommand alloc] initWithEnabled:self.editModeSignal signalBlock:^RACSignal *(id input) {
     return [RACSignal createSignal:^RACDisposable *(id<RACSubscriber> subscriber) {
-      @strongify(self);
       PersonContainerViewModel *person = [[PersonContainerViewModel alloc] initWithModel:[Person new]];
-      self.people = [@[person] arrayByAddingObjectsFromArray:self.people];
+      [subscriber sendNext:person];
       [subscriber sendCompleted];
       
       return nil;
     }];
+  }];
+  
+  [[self.addPersonButton.rac_command.executionSignals concat] subscribeNext:^(PersonContainerViewModel
+ *person) {
+    self.people = [@[person] arrayByAddingObjectsFromArray:self.people];
   }];
   
   PersonContainerViewModel *person1 = [[PersonContainerViewModel alloc] initWithModel:[Person new]];
@@ -61,11 +63,6 @@
   PersonContainerViewModel *person4 = [[PersonContainerViewModel alloc] initWithModel:[Person new]];
   
   self.people = @[person1, person2, person3, person4];
-}
-
-- (void)didReceiveMemoryWarning {
-  [super didReceiveMemoryWarning];
-  // Dispose of any resources that can be recreated.
 }
 
 @end

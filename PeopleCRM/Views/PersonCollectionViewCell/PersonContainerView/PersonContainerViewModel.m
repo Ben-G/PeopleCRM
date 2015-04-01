@@ -26,9 +26,7 @@
 - (id)initWithModel:(Person *)person {
   self = [super init];
   
-  if (self) {
-    self.person = person;
-    
+  if (self) {    
     RACSignal *twitterFetchSignal = [RACObserve(self, personAddingViewModel)
        flattenMap:^RACStream *(PersonAddingViewModel *addingViewModel) {
           return [addingViewModel.addTwitterButtonCommand.executionSignals concat];
@@ -39,7 +37,7 @@
     }] startWith:@(PersonCollectionReusableViewStateAddingTwitter)];
     
     RAC(self, UIState) = UIStateSignal;
-    RAC(self, person) = twitterFetchSignal;
+    RAC(self, person) = [twitterFetchSignal startWith:person];
     RAC(self, personDetailsViewModel.person) = RACObserve(self, person);
   }
   
